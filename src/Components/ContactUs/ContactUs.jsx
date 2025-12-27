@@ -84,10 +84,12 @@ export default function ContactUs() {
                 <h4 className="text-lg font-semibold text-gray-900">
                   Headquarters
                 </h4>
-                <p className="text-gray-600">Juba, South Sudan</p>
-                <p className="text-gray-500 text-sm">
-                  Operating across all 10 states & 3 administrative areas
-                </p>
+                <p className="text-gray-600">
+              Gudele West Block (2) Juba, South Sudan
+            </p>
+            <p className="text-gray-500 text-sm">
+              Operating across all 10 states & 3 administrative areas
+            </p>
               </div>
             </div>
 
@@ -98,7 +100,12 @@ export default function ContactUs() {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                <p className="text-gray-600">trustsouthsudan@gmail.com</p>
+                <a 
+              href="mailto:trustsouthsudan@gmail.com" 
+              className="text-gray-600 hover:text-emerald-700 transition-colors"
+            >
+              trustsouthsudan@gmail.com
+            </a>
               </div>
             </div>
 
@@ -109,7 +116,20 @@ export default function ContactUs() {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                <p className="text-gray-600">+21192122</p>
+                 <div className="text-gray-600 space-y-1">
+              <a 
+                href="tel:+211927863377"
+                className="block hover:text-emerald-700 transition-colors"
+              >
+                MTN: +211 927 863 377
+              </a>
+              <a 
+                href="tel:+211911743455"
+                className="block hover:text-emerald-700 transition-colors"
+              >
+                Zain: +211 911 743 455
+              </a>
+            </div>
               </div>
             </div>
 
