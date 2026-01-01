@@ -67,11 +67,7 @@ const BackgroundAndLegal = () => {
             Legal Framework
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-200 leading-relaxed">
-            Trust South Sudan operates within the framework of the South Sudan
-            Organizations Act, 2016. Sections 5 and 6 of this Act provide the
-            legal basis for registration, operation, and accountability of
-            non-governmental organizations, underscoring our commitment to
-            transparency and adherence to national law.
+            <span className="font-bold">Trust South Sudan.</span> The South Sudan Organizations Act, 2016, which establishes the legal foundation for the establishment and management of non-governmental organizations in South Sudan, should be followed. This Act's Sections 4 and 5  make it easier for groups like "TRUST SOUTH SUDAN" to register, run, and be held accountable while highlighting their dedication to openness and respect for national law.
           </p>
         </div>
 
