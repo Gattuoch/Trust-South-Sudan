@@ -9,10 +9,23 @@ const MissionVision = () => {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
 
-          {/* Mission */}
-          <div className="relative rounded-2xl bg-[#f2f9f5] p-8">
+          {/* Vision */}
+          <div className="relative rounded-2xl bg-[#f4fbf8] p-8">
             <div className="absolute left-0 top-0 h-full w-1 bg-green-700 rounded-l-2xl" />
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-700 text-white">
+              <HiOutlineEye className="text-xl" />
+            </div>
+            <h3 className="mt-6 text-2xl font-bold">Vision</h3>
+            <p className="mt-4 text-gray-600">
+              With the confidence, Trust South Sudan envisions a society in which everyone, regardless of origin, can live in harmony, exercise their fundamental rights, and take an active role in democratic administration. We envision a society where everyone contributes to a sustainable and successful future, the rule of law is upheld, and there is no corruption or tribalism. Our goal is to lead the way in bringing about change by encouraging a culture of responsibility, solidarity, and fortitude among community members.
+
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="relative rounded-2xl bg-[#f2f9f5] p-8">
+            <div className="absolute left-0 top-0 h-full w-1 bg-[#73e2ab]  rounded-l-2xl" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#73e2ab] text-white">
               <FiTarget className="text-xl" />
             </div>
            <h3 className="mt-6 text-2xl font-bold">Mission</h3>
@@ -84,18 +97,6 @@ const MissionVision = () => {
 
           </div>
 
-          {/* Vision */}
-          <div className="relative rounded-2xl bg-[#f4fbf8] p-8">
-            <div className="absolute left-0 top-0 h-full w-1 bg-[#73e2ab] rounded-l-2xl" />
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#73e2ab] text-white">
-              <HiOutlineEye className="text-xl" />
-            </div>
-            <h3 className="mt-6 text-2xl font-bold">Vision</h3>
-            <p className="mt-4 text-gray-600">
-              With the confidence, Trust South Sudan envisions a society in which everyone, regardless of origin, can live in harmony, exercise their fundamental rights, and take an active role in democratic administration. We envision a society where everyone contributes to a sustainable and successful future, the rule of law is upheld, and there is no corruption or tribalism. Our goal is to lead the way in bringing about change by encouraging a culture of responsibility, solidarity, and fortitude among community members.
-
-            </p>
-          </div>
 
           {/* Motto */}
           <div className="relative rounded-2xl bg-[#fff6eb] p-8">
@@ -103,51 +104,61 @@ const MissionVision = () => {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white">
               <FaQuoteLeft className="text-xl" />
             </div>
-            <h3 className="mt-6 text-2xl font-bold">Our Mandate</h3>
+      <h3 className="mt-8 text-3xl font-extrabold text-gray-800 tracking-wide">
+  GOALS AND MANDATE
+</h3>
 
-<p className="mt-4 text-gray-600 text-sm leading-relaxed">
-  Together for Reconciliation, Unity and Sustainable Development (TRUST SOUTH
-  SUDAN) is a non-partisan, non-profit, and people-centered organization
-  established in response to prolonged social fragmentation, systemic
-  corruption, tribalism, political exclusion, and persistent violations of
-  fundamental human rights in the Republic of South Sudan.
-</p>
+{/* Goals */}
+<div className="mt-6 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-3">
+  <h4 className="text-xl font-bold text-gray-800 mb-3">Our Goals</h4>
 
-<ul className="mt-4 list-disc pl-5 space-y-3 text-gray-600 text-sm leading-relaxed">
-  <li>
-    Promote national reconciliation, inclusive unity, and sustainable
-    development by addressing the root causes of conflict through peacebuilding,
-    restorative justice, civic empowerment, institutional accountability, and
-    rights-based development interventions, in line with the Constitution of the
-    Republic of South Sudan and international legal frameworks.
-  </li>
+  <ul className="list-disc pl-6 space-y-2 text-gray-700">
+    <li>Promote sustainable peacebuilding and national reconciliation</li>
+    <li>Strengthen national unity and social cohesion</li>
+    <li>Advance transitional justice, accountability, and healing</li>
+    <li>Protect and promote human rights and human dignity</li>
+    <li>Combat corruption and promote good governance</li>
+    <li>Empower women and youth as agents of peace and transformation</li>
+    <li>Drive sustainable development transformation linked to peace</li>
+  </ul>
+</div>
 
-  <li>
-    Foster truth-telling, inter-communal dialogue, and reconciliation processes
-    that restore dignity to victims, strengthen social cohesion, and rebuild
-    trust between citizens and public institutions, while rejecting all forms of
-    discrimination.
-  </li>
+{/* Mandates */}
+<div className="mt-8 rounded-xl border border-gray-200 bg-white shadow-sm p-6">
+  <h4 className="text-xl font-bold text-gray-800 mb-3">Our Mandates</h4>
 
-  <li>
-    Advocate for transparent governance, anti-corruption reforms, equitable
-    resource distribution, and community-driven development, recognizing that
-    sustainable peace depends on social justice and economic inclusion.
-  </li>
+  <ul className="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
+    <li>
+      Design and implement conflict-sensitive peacebuilding initiatives that reduce violence,
+      prevent retaliation, and foster long-term reconciliation at grassroots and national levels.
+    </li>
+    <li>
+      Promote inclusive civic engagement, inter-ethnic dialogue, and social cohesion programs
+      that unite communities around shared national values and a common destiny.
+    </li>
+    <li>
+      Advocate for and support transitional justice mechanisms, including community-based accountability,
+      reparations, and institutional reforms that restore dignity to victims and strengthen the rule of law.
+    </li>
+    <li>
+      Monitor, document, and advocate against human rights violations while strengthening local human
+      rights awareness, protection, and response mechanisms in partnership with national and international actors.
+    </li>
+    <li>
+      Support anti-corruption advocacy, civic oversight, and governance reforms that strengthen accountability,
+      public participation, and responsible leadership.
+    </li>
+    <li>
+      Promote meaningful participation of women and youth in peace processes, leadership, economic empowerment,
+      and community development initiatives.
+    </li>
+    <li>
+      Implement people-centered, conflict-sensitive development programs that improve livelihoods, strengthen resilience,
+      and reduce drivers of conflict.
+    </li>
+  </ul>
+</div>
 
-  <li>
-    Prioritize the empowerment of youth, women, survivors of conflict, and
-    marginalized communities as active agents of transformation rather than
-    passive beneficiaries.
-  </li>
-
-  <li>
-    Operate independently and impartially, serving as a bridge between
-    communities, civil society, state institutions, regional bodies, and
-    international partners to contribute to a peaceful, united, just, and
-    prosperous South Sudan for present and future generations.
-  </li>
-</ul>
 
           </div>
 

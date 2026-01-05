@@ -9,21 +9,85 @@ export default function JoinCommunity() {
   const images = [heroImage1, heroImage2, heroImage3];
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Carousel effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // smoother transition
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
 
+  // Membership data
+  const memberships = [
+    {
+      title: "Founding Members",
+      icon: <FaHandshake className="text-emerald-700 text-2xl" />,
+      border: "border-emerald-700",
+      iconBg: "bg-emerald-50",
+      description:
+        "Founding Members are those who created and officially registered TRUST SOUTH SUDAN. At the establishment of the organization, they demonstrated exceptional dedication to peace, unity, reconciliation, and sustainable development in South Sudan.",
+      criteria: [
+        "Proven integrity and strong moral standing in society",
+        "Demonstrated commitment to peacebuilding, reconciliation, or community development",
+        "Acceptance of the Organization’s Vision, Mission, Core Values, and By-Laws",
+      ],
+      donation: "$25",
+      monthly: "$10/month",
+      buttonText: "Join Membership",
+      buttonColor: "bg-emerald-700 hover:bg-emerald-800",
+    },
+    {
+      title: "Ordinary Members",
+      icon: <FaUsers className="text-emerald-500 text-2xl" />,
+      border: "border-emerald-400",
+      iconBg: "bg-emerald-50",
+      description:
+        "Ordinary Members are South Sudanese citizens or residents who voluntarily join TRUST SOUTH SUDAN and actively participate in the national, state, or local implementation of its goals and programs.",
+      criteria: [
+        "Minimum age as provided by law of South Sudan and international community (above 18 years old)",
+        "Commitment to reconciliation, unity, non-violence, and sustainable development",
+        "Willingness to abide by the By-Laws and Code of Conduct",
+      ],
+      donation: "$50",
+      monthly: "$25/month",
+      buttonText: "Join Family Membership",
+      buttonColor: "bg-emerald-500 hover:bg-emerald-600",
+    },
+    {
+      title: "Honorary Members",
+      icon: <FaGlobe className="text-orange-500 text-2xl" />,
+      border: "border-orange-500",
+      iconBg: "bg-orange-50",
+      description:
+        "Honorary Members are eminent people, organizations, or partners—domestic or foreign—acknowledged for their outstanding contributions to human rights, peace, reconciliation, unity, or sustainable development in South Sudan.",
+      criteria: [
+        "Outstanding service aligned with the Organization’s mandate",
+        "High moral integrity and international credibility",
+        "Approval by the Board of Directors",
+      ],
+      donation: "$1,000+",
+      monthly: "$5,000+/year",
+      buttonText: "Explore Corporate Partnership",
+      buttonColor: "bg-orange-500 hover:bg-orange-600",
+    },
+  ];
+
   return (
-    <section
-      className="relative bg-cover bg-center bg-no-repeat py-20"
-      style={{ backgroundImage: `url(${images[currentIndex]})` }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+    <section className="relative py-20">
+      {/* Background Carousel */}
+      <div className="absolute inset-0">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -39,104 +103,65 @@ export default function JoinCommunity() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Individual */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-emerald-700 hover:shadow-xl transition">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-emerald-50 mb-6">
-              <FaHandshake className="text-emerald-700 text-2xl" />
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Individual Membership
-            </h3>
-
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Support our mission with a one-time or recurring contribution.
-              Members receive regular updates and special recognition.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex justify-between text-gray-700">
-                <span>One-Time Donation</span>
-                <span className="font-semibold text-emerald-700">$25</span>
+          {memberships.map((member, i) => (
+            <div
+              key={i}
+              className={`bg-white rounded-2xl shadow-lg p-8 border-t-4 ${member.border} hover:shadow-xl transition`}
+            >
+              <div
+                className={`w-14 h-14 flex items-center justify-center rounded-full ${member.iconBg} mb-6`}
+              >
+                {member.icon}
               </div>
-              <div className="flex justify-between text-gray-700">
-                <span>Monthly Membership</span>
-                <span className="font-semibold text-emerald-700">
-                  $10/month
-                </span>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {member.title}
+              </h3>
+
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {member.description}
+              </p>
+
+              {/* Eligibility Criteria */}
+              <div className="mt-6">
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  Eligibility Criteria
+                </h4>
+                <ul className="list-disc pl-6 space-y-2 text-gray-700 text-sm leading-relaxed">
+                  {member.criteria.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
 
-            <button className="w-full rounded-xl bg-emerald-700 py-3 text-white font-semibold hover:bg-emerald-800 transition">
-              Join Membership
-            </button>
-          </div>
-
-          {/* Family */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-emerald-400 hover:shadow-xl transition">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-emerald-50 mb-6">
-              <FaUsers className="text-emerald-500 text-2xl" />
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Family Membership
-            </h3>
-
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Support multiple family members and receive additional benefits.
-              Perfect for families and households.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex justify-between text-gray-700">
-                <span>One-Time Donation</span>
-                <span className="font-semibold text-emerald-700">$50</span>
+              {/* Donations */}
+              <div className="space-y-4 my-6">
+                <div className="flex justify-between text-gray-700">
+                  <span>One-Time Donation</span>
+                  <span className="font-semibold text-emerald-700">
+                    {member.donation}
+                  </span>
+                </div>
+                <div className="flex justify-between text-gray-700">
+                  <span>
+                    {member.title === "Honorary Members"
+                      ? "Annual Partnership"
+                      : "Monthly Membership"}
+                  </span>
+                  <span className="font-semibold text-emerald-700">
+                    {member.monthly}
+                  </span>
+                </div>
               </div>
-              <div className="flex justify-between text-gray-700">
-                <span>Monthly Membership</span>
-                <span className="font-semibold text-emerald-700">
-                  $25/month
-                </span>
-              </div>
+
+              {/* Button */}
+              <button
+                className={`w-full rounded-xl py-3 text-white font-semibold transition ${member.buttonColor}`}
+              >
+                {member.buttonText}
+              </button>
             </div>
-
-            <button className="w-full rounded-xl bg-emerald-500 py-3 text-white font-semibold hover:bg-emerald-600 transition">
-              Join Family Membership
-            </button>
-          </div>
-
-          {/* Corporate */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-orange-500 hover:shadow-xl transition">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange-50 mb-6">
-              <FaGlobe className="text-orange-500 text-2xl" />
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Corporate Partnership
-            </h3>
-
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Partner with Trust South Sudan to support peacebuilding and
-              sustainable development through corporate social responsibility.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex justify-between text-gray-700">
-                <span>One-Time Donation</span>
-                <span className="font-semibold text-emerald-700">$1,000+</span>
-              </div>
-              <div className="flex justify-between text-gray-700">
-                <span>Annual Partnership</span>
-                <span className="font-semibold text-emerald-700">
-                  $5,000+/year
-                </span>
-              </div>
-            </div>
-
-            <button className="w-full rounded-xl bg-orange-500 py-3 text-white font-semibold hover:bg-orange-600 transition">
-              Explore Corporate Partnership
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>

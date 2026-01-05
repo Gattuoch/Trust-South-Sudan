@@ -32,7 +32,7 @@ const Navbar = () => {
               Trust South Sudan
             </span>
             <span className="text-xs text-gray-600">
-              Restoring Dignity, Building a Sustainable Future
+              From Division to Dignity, from Violence to Values, <br />from Aid Dependency to National Ownership
             </span>
           </div>
         </Link>
