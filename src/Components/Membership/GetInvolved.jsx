@@ -28,7 +28,7 @@ export default function GetInvolved() {
               sustainable development initiatives.
             </p>
             <a href="/donate">
-            <button className="rounded-xl bg-emerald-700 px-8 py-3 text-white font-semibold hover:bg-emerald-800 transition">
+            <button className="rounded-xl bg-emerald-700 px-8 py-3 text-white font-semibold hover:bg-emerald-800 transition cursor-pointer">
               Make a Donation
             </button>
             </a>
@@ -46,7 +46,7 @@ export default function GetInvolved() {
               Share your skills and time to support community programs,
               training sessions, and advocacy efforts.
             </p>
-            <button className="rounded-xl bg-emerald-500 px-8 py-3 text-white font-semibold hover:bg-emerald-600 transition">
+            <button className="rounded-xl bg-emerald-500 px-8 py-3 text-white font-semibold hover:bg-emerald-600 transition cursor-pointer">
               Become a Volunteer
             </button>
           </div>
@@ -61,7 +61,7 @@ export default function GetInvolved() {
               Spread awareness about our mission and help amplify the voices of
               marginalized communities.
             </p>
-            <button className="rounded-xl bg-orange-500 px-8 py-3 text-white font-semibold hover:bg-orange-600 transition">
+            <button className="rounded-xl bg-orange-500 px-8 py-3 text-white font-semibold hover:bg-orange-600 transition cursor-pointer">
               Join Our Advocacy
             </button>
           </div>

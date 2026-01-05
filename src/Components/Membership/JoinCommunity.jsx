@@ -156,7 +156,7 @@ export default function JoinCommunity() {
 
               {/* Button */}
               <button
-                className={`w-full rounded-xl py-3 text-white font-semibold transition ${member.buttonColor}`}
+                className={`w-full rounded-xl py-3 text-white font-semibold transition cursor-pointer ${member.buttonColor}`}
               >
                 {member.buttonText}
               </button>
