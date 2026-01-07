@@ -77,37 +77,8 @@ const BackgroundAndLegal = () => {
   </p>
 </div>
 
-        {/* Legal Cards */}
-        <div className="mt-16 grid gap-8 lg:grid-cols-2">
-          {/* Registration */}
-          <div className="rounded-3xl bg-emerald-50 p-10">
-            <h3 className="text-xl font-semibold text-gray-900">
-              Registration
-            </h3>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Officially registered with the Ministry of Justice and operating
-              under the legal framework of South Sudan.
-            </p>
-            {/* <p className="mt-4 text-sm text-gray-500">
-              Registration Number: 123456789
-            </p> */}
-          </div>
 
-          {/* Governance */}
-          <div className="rounded-3xl bg-emerald-50 p-10">
-            <h3 className="text-xl font-semibold text-gray-900">
-              Governance
-            </h3>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Governed by a Board of Directors responsible for strategic
-              leadership, oversight, and financial accountability.
-            </p>
-            <p className="mt-4 text-sm text-gray-500">
-             Board of Directors : 5 – 9 Members
-            </p>
-          </div>
-        </div>
-       {/* Non-Profit Nature */}
+{/* Non-Profit Nature */}
 <div className="mt-24 text-center px-4 bg-white/10 py-12 rounded-3xl">
   <h2 className="text-4xl font-bold text-white">
     Non-Profit Nature
@@ -139,6 +110,38 @@ const BackgroundAndLegal = () => {
   </ul>
 </div>
 
+
+        {/* Legal Cards */}
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {/* Registration */}
+          <div className="rounded-3xl bg-emerald-50 p-10">
+            <h3 className="text-xl font-semibold text-gray-900">
+              Registration
+            </h3>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              Officially registered with the Ministry of Justice and operating
+              under the legal framework of South Sudan.
+            </p>
+            {/* <p className="mt-4 text-sm text-gray-500">
+              Registration Number: 123456789
+            </p> */}
+          </div>
+
+          {/* Governance */}
+          <div className="rounded-3xl bg-emerald-50 p-10">
+            <h3 className="text-xl font-semibold text-gray-900">
+              Governance
+            </h3>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              Governed by a Board of Directors responsible for strategic
+              leadership, oversight, and financial accountability.
+            </p>
+            <p className="mt-4 text-sm text-gray-500">
+             Board of Directors : 5 – 9 Members
+            </p>
+          </div>
+        </div>
+       
 
       </div>
     </section>
