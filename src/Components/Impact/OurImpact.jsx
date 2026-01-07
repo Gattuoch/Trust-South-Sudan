@@ -4,12 +4,18 @@ import {
   FaMapMarkedAlt,
   FaHeart,
   FaHandshake,
-  FaGraduationCap,
+  FaUsers,
 } from "react-icons/fa";
 
 import Building from "../../assets/Building-Bridges.png";
 import Empowering from "../../assets/Empowering-Women-Leaders.png";
 import Youth from "../../assets/Youth-Leading-Change.png";
+import Sensitization from "../../assets/Sensitization.png";
+import VulnerableGroups from "../../assets/VulnerableGroups.png";
+import FutureImpact from "../../assets/future-impact.png";
+import YouthUnity from "../../assets/Youth-unity.png";
+import Peace from "../../assets/Peace.png";
+import Achievements from "../../assets/Achievements.png";
 
 /* =======================
    Counter Component
@@ -43,62 +49,83 @@ const Counter = ({ end, duration = 2 }) => {
 const stats = [
   {
     icon: <FaMapMarkedAlt />,
-    value: 10,
+    value: 8,
     suffix: "+",
-    label: "States & Areas",
+    label: "Counties Reached",
     color: "text-green-700",
     bg: "bg-green-50",
   },
   {
     icon: <FaHeart />,
-    value: 5000,
+    value: 3000,
     suffix: "+",
-    label: "Lives Impacted",
+    label: "Lives Positively Impacted",
     color: "text-emerald-600",
     bg: "bg-emerald-50",
   },
   {
     icon: <FaHandshake />,
-    value: 200,
+    value: 120,
     suffix: "+",
-    label: "Conflicts Mediated",
+    label: "Peace Dialogues Facilitated",
     color: "text-blue-600",
     bg: "bg-blue-50",
   },
   {
-    icon: <FaGraduationCap />,
-    value: 1500,
+    icon: <FaUsers />,
+    value: 900,
     suffix: "+",
-    label: "Trained Leaders",
+    label: "Youth & Community Leaders Engaged",
     color: "text-orange-500",
     bg: "bg-orange-50",
   },
 ];
 
 /* =======================
-   Stories Data
+   Stories / Impact Areas
 ======================= */
 const stories = [
   {
-    title: "Empowering Women Leaders",
+    title: "Previous Achievements",
     desc:
-      "Training programs have equipped over 500 women with leadership skills, enabling them to become advocates for peace in their communities.",
-    image: Empowering,
+      "Despite ongoing conflict, fragility, and social mistrust in South Sudan, TRUST South Sudan has demonstrated its ability to deliver tangible, community-led, and peace-focused outcomes that positively impact lives and strengthen social cohesion.",
+    image: Achievements,
     color: "text-green-700",
   },
   {
-    title: "Youth Leading Change",
+    title: "Peace & Reconciliation",
     desc:
-      "Young people are driving environmental initiatives, planting thousands of trees and creating sustainable livelihoods for their communities.",
-    image: Youth,
+      "Facilitated community peace forums involving conflicting youth groups, traditional leaders, women, and religious leaders in selected counties—reducing tensions, restoring dialogue, and rebuilding trust among divided communities.",
+    image: Peace,
     color: "text-emerald-600",
   },
   {
-    title: "Building Bridges",
+    title: "Youth Unity & Leadership Empowerment",
     desc:
-      "Peace dialogues have brought together formerly conflicting communities, fostering understanding and cooperation across tribal lines.",
-    image: Building,
+      "Organized youth leadership and cultural exchange initiatives that brought together young people from different ethnic backgrounds to participate in joint social and development activities, fostering unity and a shared national identity.",
+    image: YouthUnity,
     color: "text-blue-600",
+  },
+  {
+    title: "Support to Vulnerable Groups",
+    desc:
+      "Implemented small-scale livelihood and psychosocial support programs empowering vulnerable women, widows, internally displaced persons, and conflict-affected youth—enhancing resilience, dignity, and social stability.",
+    image: VulnerableGroups ,
+    color: "text-orange-500",
+  },
+  {
+    title: "Community Sensitization & Awareness",
+    desc:
+      "Conducted civic education and awareness campaigns on peacebuilding, coexistence, genocide prevention, and social cohesion, strengthening informed participation and community responsibility.",
+    image: Sensitization,
+    color: "text-purple-600",
+  },
+  {
+    title: "Future Impact & Expansion",
+    desc:
+      "With stronger partnerships and sufficient funding, TRUST South Sudan aims to expand reconciliation programs, promote national unity beyond tribal lines, strengthen livelihoods, support governance, and advance climate resilience for long-term national recovery.",
+    image: FutureImpact,
+    color: "text-teal-600",
   },
 ];
 
@@ -134,7 +161,7 @@ const OurImpact = () => {
             Our Impact
           </h2>
           <p className="mt-4 text-lg text-gray-500">
-            Creating meaningful change across South Sudan
+            Peacebuilding, unity, and sustainable development in action
           </p>
         </motion.div>
 
@@ -171,13 +198,13 @@ const OurImpact = () => {
         </motion.div>
 
         {/* Stories */}
-        <div className="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <div className="mt-24 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {stories.map((story, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               className="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition"
@@ -197,12 +224,11 @@ const OurImpact = () => {
                   {story.desc}
                 </p>
 
-                <button
-                  className={`mt-6 inline-flex items-center gap-2 font-medium cursor-pointer ${story.color}`}
+                <span
+                  className={`mt-6 inline-flex items-center gap-2 font-medium ${story.color}`}
                 >
-                  Read Story
-                  <span className="text-xl">→</span>
-                </button>
+                  Learn More →
+                </span>
               </div>
             </motion.div>
           ))}

@@ -61,15 +61,21 @@ const BackgroundAndLegal = () => {
           </div>
         </div>
 
-        {/* Legal Framework */}
-        <div className="mt-24 text-center">
-          <h2 className="text-4xl font-bold text-white">
-            Legal Framework
-          </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-200 leading-relaxed">
-            <span className="font-bold">Trust South Sudan.</span> The South Sudan Organizations Act, 2016, which establishes the legal foundation for the establishment and management of non-governmental organizations in South Sudan, should be followed. This Act's Sections 4 and 5  make it easier for groups like "TRUST SOUTH SUDAN" to register, run, and be held accountable while highlighting their dedication to openness and respect for national law.
-          </p>
-        </div>
+       {/* Legal Framework */}
+<div className="mt-24 text-center px-4 bg-white/10 py-12 rounded-3xl">
+  <h2 className="text-4xl font-bold text-white">
+    Legal Framework
+  </h2>
+
+  <p className="mt-6 max-w-4xl mx-auto text-lg text-gray-200 leading-relaxed">
+    <span className="font-semibold">TRUST South Sudan</span> (Together for
+    Reconciliation, Unity and Sustainable Development Transformation) is a
+    national, independent, non-governmental, non-political, and non-religious
+    civil society organization, duly established and registered in accordance
+    with the laws of the Republic of South Sudan and all applicable NGO and civil
+    society regulatory frameworks.
+  </p>
+</div>
 
         {/* Legal Cards */}
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
@@ -101,6 +107,39 @@ const BackgroundAndLegal = () => {
             </p>
           </div>
         </div>
+       {/* Non-Profit Nature */}
+<div className="mt-24 text-center px-4 bg-white/10 py-12 rounded-3xl">
+  <h2 className="text-4xl font-bold text-white">
+    Non-Profit Nature
+  </h2>
+
+  <p className="mt-6 max-w-4xl mx-auto text-lg text-gray-200 leading-relaxed">
+    <span className="font-semibold">TRUST South Sudan</span> is established
+    exclusively for humanitarian assistance, peacebuilding, human rights
+    promotion, reconciliation, unity, and sustainable development transformation
+    purposes. The Organization operates strictly on a non-profit basis and shall
+    not be conducted for financial gain.
+  </p>
+
+  <ul className="mt-6 max-w-3xl mx-auto text-left text-lg text-gray-200 leading-relaxed space-y-3 list-disc list-inside">
+    <li>
+      No part of the Organization’s net earnings or assets shall benefit any
+      member, founder, board member, officer, employee, or affiliate, except as
+      reasonable and fair compensation for services rendered in furtherance of
+      its lawful operations.
+    </li>
+    <li>
+      All income, grants, donations, assets, and resources of the Organization
+      shall be used exclusively to achieve its vision, mission, and objectives.
+    </li>
+    <li>
+      The Organization shall not engage in any activity inconsistent with its
+      non-profit status.
+    </li>
+  </ul>
+</div>
+
+
       </div>
     </section>
   );
