@@ -40,7 +40,7 @@ const About = () => {
 
           {/* Title */}
           <h2 className="mt-6 text-4xl font-extrabold text-gray-900 leading-tight lg:text-5xl">
-            Healing the Nation and <br /> Restoring the Promise
+            Healing the Nation , <br /> Restoring the Promise
           </h2>
 
           {/* Paragraphs */}

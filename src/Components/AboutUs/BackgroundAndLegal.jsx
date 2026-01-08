@@ -64,54 +64,64 @@ const BackgroundAndLegal = () => {
           </div>
         </div>
 
-        {/* Legal Framework */}
+        {/* Legal Framework Section */}
+<div className="mt-24 px-4 bg-white/10 py-14 rounded-3xl text-center">
+
+  {/* Legal Framework */}
+  <h2 className="text-4xl font-bold text-white">
+    Legal Framework
+  </h2>
+
+  <p className="mt-8 max-w-4xl mx-auto text-lg text-gray-200 leading-relaxed">
+    <span className="font-semibold">TRUST South Sudan</span> (Together for
+    Reconciliation, Unity, and Sustainable Development Transformation) is a
+    national, independent, non-governmental, non-political, and non-religious
+    civil society organization. It is duly established and registered in
+    accordance with the laws of the Republic of South Sudan and all applicable
+    NGO and civil society regulatory frameworks.
+  </p>
+
+  {/* Divider */}
+  <div className="my-14 h-px w-32 mx-auto bg-white/30" />
+
+  {/* Non-Profit Nature */}
+  <h2 className="text-4xl font-bold text-white">
+    Non-Profit Nature
+  </h2>
+
+  <p className="mt-8 max-w-4xl mx-auto text-lg text-gray-200 leading-relaxed">
+    <span className="font-semibold">TRUST South Sudan</span> is established
+    exclusively for humanitarian assistance, peacebuilding, human rights
+    promotion, reconciliation, unity, and sustainable development
+    transformation. The organization operates strictly on a non-profit basis
+    and shall not be conducted for financial gain.
+  </p>
+
+  <ul className="mt-8 max-w-3xl mx-auto text-left text-lg text-gray-200 leading-relaxed space-y-4 list-disc list-inside">
+    <li>
+      No part of the organization’s net earnings or assets shall benefit any
+      member, founder, board member, officer, employee, or affiliate, except
+      as reasonable and fair compensation for services rendered in furtherance
+      of its lawful operations.
+    </li>
+    <li>
+      All income, grants, donations, assets, and resources shall be used
+      exclusively to achieve the organization’s vision, mission, and
+      objectives.
+    </li>
+    <li>
+      The organization shall not engage in any activity inconsistent with its
+      non-profit status.
+    </li>
+  </ul>
+
+</div>
+
+
+        {/* Non-Profit Nature
         <div className="mt-24 text-center px-4 bg-white/10 py-12 rounded-3xl">
-          <h2 className="text-4xl font-bold text-white">
-            Legal Framework
-          </h2>
-
-          <p className="mt-6 max-w-4xl mx-auto text-lg text-gray-200 leading-relaxed">
-            <span className="font-semibold">TRUST South Sudan</span> (Together for
-            Reconciliation, Unity, and Sustainable Development Transformation) is
-            a national, independent, non-governmental, non-political, and
-            non-religious civil society organization. It is duly established and
-            registered in accordance with the laws of the Republic of South Sudan
-            and all applicable NGO and civil society regulatory frameworks.
-          </p>
-        </div>
-
-        {/* Non-Profit Nature */}
-        <div className="mt-24 text-center px-4 bg-white/10 py-12 rounded-3xl">
-          <h2 className="text-4xl font-bold text-white">
-            Non-Profit Nature
-          </h2>
-
-          <p className="mt-6 max-w-4xl mx-auto text-lg text-gray-200 leading-relaxed">
-            <span className="font-semibold">TRUST South Sudan</span> is established
-            exclusively for humanitarian assistance, peacebuilding, human rights
-            promotion, reconciliation, unity, and sustainable development
-            transformation. The organization operates strictly on a non-profit
-            basis and shall not be conducted for financial gain.
-          </p>
-
-          <ul className="mt-6 max-w-3xl mx-auto text-left text-lg text-gray-200 leading-relaxed space-y-3 list-disc list-inside">
-            <li>
-              No part of the organization’s net earnings or assets shall benefit
-              any member, founder, board member, officer, employee, or affiliate,
-              except as reasonable and fair compensation for services rendered in
-              furtherance of its lawful operations.
-            </li>
-            <li>
-              All income, grants, donations, assets, and resources shall be used
-              exclusively to achieve the organization’s vision, mission, and
-              objectives.
-            </li>
-            <li>
-              The organization shall not engage in any activity inconsistent with
-              its non-profit status.
-            </li>
-          </ul>
-        </div>
+         
+        </div> */}
 
         {/* Legal Cards */}
         <div className="mt-16 grid gap-8 lg:grid-cols-2">

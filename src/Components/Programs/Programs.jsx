@@ -6,6 +6,9 @@ import heroImage1 from "../../assets/impact1.png";
 import heroImage2 from "../../assets/impact2.png";
 import heroImage3 from "../../assets/impact3.png";
 
+/* =======================
+   Programs Data
+======================= */
 const programs = [
   {
     icon: <FaHandshake />,
@@ -65,10 +68,14 @@ const programs = [
   },
 ];
 
-// Animations
+/* =======================
+   Animations
+======================= */
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.2 } },
+  show: {
+    transition: { staggerChildren: 0.2 },
+  },
 };
 
 const card = {
@@ -80,6 +87,9 @@ const card = {
   },
 };
 
+/* =======================
+   Component
+======================= */
 const Programs = () => {
   const images = [heroImage1, heroImage2, heroImage3];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -87,7 +97,7 @@ const Programs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // smoother: 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -97,7 +107,7 @@ const Programs = () => {
       className="relative bg-cover bg-center bg-no-repeat py-28 px-6 lg:px-16"
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
-      {/* Overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative mx-auto max-w-7xl">
@@ -118,7 +128,7 @@ const Programs = () => {
           </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* Program Cards */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -133,7 +143,7 @@ const Programs = () => {
               whileHover={{ y: -8 }}
               className="relative rounded-3xl bg-white p-10 border border-gray-100 shadow-sm hover:shadow-xl transition"
             >
-              {/* Accent */}
+              {/* Accent Bar (FIXED) */}
               <div
                 className={`absolute inset-x-0 top-0 h-1 rounded-t-3xl ${program.Accent}`}
               />
@@ -147,16 +157,17 @@ const Programs = () => {
                 <span className="text-xl">{program.icon}</span>
               </motion.div>
 
-              {/* Content */}
+              {/* Title */}
               <h3 className="mt-6 text-2xl font-semibold text-gray-900">
                 {program.title}
               </h3>
 
+              {/* Description */}
               <p className="mt-4 text-gray-600 leading-relaxed">
                 {program.desc}
               </p>
 
-              {/* Points */}
+              {/* Bullet Points */}
               <ul className="mt-6 space-y-3">
                 {program.points.map((point, i) => (
                   <motion.li
