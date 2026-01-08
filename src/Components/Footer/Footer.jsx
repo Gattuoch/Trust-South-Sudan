@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
 
             <p className="mt-6 text-sm leading-relaxed">
-              Restoring Dignity, Building a Sustainable Future
+             Healing the Nation. <br /> Restoring the Promise
             </p>
 
             <p className="mt-4 text-sm leading-relaxed">
