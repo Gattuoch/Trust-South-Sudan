@@ -74,13 +74,13 @@ const Footer = () => {
 
             <ul className="mt-4 space-y-2 text-xs text-gray-400 leading-5">
               {[
-                "Community Peace & Reconciliation Initiative",
-                "Youth Education & Skills Transformation",
-                "Gender Empowerment, Protection & Leadership",
-                "Agricultural & Livelihood Resilience",
-                "Governance & Civic Education",
-                "Humanitarian & Community Health",
-                "Climate Action & Environmental Protection",
+                "Healing the Nation",
+                "Empowering Tomorrow",
+                "Women Rise",
+                "Food for Peace",
+                "Healthy Communities ",
+                "Accountable Leaders",
+                "Green South Sudan",
               ].map((program, index) => (
                 <li
                   key={index}
