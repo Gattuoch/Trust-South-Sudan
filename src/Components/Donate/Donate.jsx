@@ -92,12 +92,13 @@ const Donate = () => {
             </label>
             <select className="w-full rounded-xl border-2 border-gray-200 py-4 px-4 text-lg focus:border-emerald-600 focus:outline-none">
               <option>General Support</option>
-              <option>Peace & Reconciliation</option>
-              <option>Youth Empowerment</option>
-              <option>Human Rights & Legal Aid</option>
-              <option>Unity & Social Cohesion</option>
-              <option>Sustainable Development</option>
-              <option>Women Leadership</option>
+              <option>Healing the Nation</option>
+              <option>Empowering Tomorrow</option>
+              <option>Women Rise</option>
+              <option>Food for Peace</option>
+              <option>Healthy Communities</option>
+              <option>Accountable Leaders</option>
+              <option>Green South Sudan</option>
             </select>
           </div>
 
