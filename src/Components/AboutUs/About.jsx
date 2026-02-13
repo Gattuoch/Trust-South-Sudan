@@ -5,7 +5,7 @@ import heroImage1 from "../../assets/impact5.png";
 import heroImage2 from "../../assets/peace.png";
 
 const About = () => {
-  const images = [heroImage1, heroImage2, heroImage3,aboutImg];
+  const images = [heroImage1];
     const [currentIndex, setCurrentIndex] = useState(0);
   
     useEffect(() => {

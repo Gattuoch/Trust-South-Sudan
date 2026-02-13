@@ -133,9 +133,8 @@ const BackgroundAndLegal = () => {
             <p className="mt-4 text-gray-700 leading-relaxed">
               TRUST South Sudan is officially registered by the Ministry of
               Justice and Constitutional Affairs of the Republic of South Sudan
-              and operates under the legal framework of the South Sudan NGOs Act,
-              2016. The organization has fulfilled all registration requirements
-              in accordance with Article 4 of the Regulations.
+              and operates under Chapter 3, Section 10 of NGOs Act,
+              2016. 
             </p>
           </div>
 

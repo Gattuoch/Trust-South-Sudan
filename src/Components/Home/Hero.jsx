@@ -36,86 +36,85 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 1000); // 1 second
+    }, 3000); // change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
+
   return (
-    <section className="bg-[#f4f8f5] py-20 lg:py-32 px-6 lg:px-16">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+    <section
+      className="relative min-h-screen py-20 lg:py-32 px-6 lg:px-16 bg-cover bg-center transition-all duration-1000 "
+      style={{
+        backgroundImage: `url(${images[currentIndex]})`,
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
-          {/* LEFT CONTENT */}
-          <div>
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
-              <FaDove className="text-green-600" />
-              Building Peace Together
-            </div>
+      {/* Content */}
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="max-w-2xl">
 
-            {/* Heading */}
-            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
-              Building a{" "}
-              <span className="text-[rgb(15,80,28)]">Peaceful</span>
-              <br /> &{" "}
-              <span className="text-[rgb(123,230,144)]">Sustainable</span>{" "}
-              South <br />
-              Sudan
-            </h1>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
+            <FaDove className="text-green-600" />
+            Building Peace Together
+          </div>
 
-            {/* Description */}
-            <p className="mt-6 max-w-xl text-lg text-gray-600">
-              Together for Reconciliation, Unity, & Sustainable Development
-              Transformation across South Sudan
-            </p>
+          {/* Heading */}
+          <h1 className="mt-6 text-4xl font-extrabold leading-tight text-white md:text-5xl">
+            Building a{" "}
+            <span className="text-[rgb(123,230,144)]">Peaceful</span>
+            <br /> &{" "}
+            <span className="text-[rgb(15,80,28)]">Sustainable</span>{" "}
+            South <br />
+            Sudan
+          </h1>
 
-            {/* Buttons */}
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/donate">
-              <button className="flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition cursor-pointer hover:bg-green-800">
+          {/* Description */}
+          <p className="mt-6 max-w-xl text-lg text-gray-200">
+            Together for Reconciliation, Unity, & Sustainable Development
+            Transformation across South Sudan
+          </p>
+
+          {/* Buttons */}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a href="/donate">
+              <button className="flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:bg-green-800">
                 <FaHandHoldingHeart className="text-lg" />
                 Support Our Mission
               </button>
-              </a>
+            </a>
 
-             <a href="/"> <button className="rounded-xl border-2 border-green-700 px-6 py-3 font-semibold cursor-pointer text-green-700 transition hover:bg-[#39e70e] hover:text-white">
+            <a href="/">
+              <button className="rounded-xl border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-green-700">
                 Learn More
               </button>
-              </a>
-            </div>
-
-            {/* Counters */}
-            <div className="mt-10 flex gap-10">
-              <div>
-                <p className="text-3xl font-bold text-[rgba(15,80,28,0.69)]">
-                  <Counter end={10} />+
-                </p>
-                <p className="text-sm text-gray-500">States Served</p>
-              </div>
-
-              <div>
-                <p className="text-3xl font-bold text-[rgb(114,226,136)]">
-                  <Counter end={5} />k+
-                </p>
-                <p className="text-sm text-gray-500">Lives Impacted</p>
-              </div>
-
-              <div>
-                <p className="text-3xl font-bold text-[rgb(231,100,13)]">
-                  <Counter end={15}  />+
-                </p>
-                <p className="text-sm text-gray-500">Active Programs</p>
-              </div>
-            </div>
+            </a>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div>
-            <img
-              src={images[currentIndex]}
-              alt="Community unity"
-              className="w-full rounded-3xl object-cover shadow-xl"
-            />
+          {/* Counters */}
+          <div className="mt-10 flex gap-10">
+            <div>
+              <p className="text-3xl font-bold text-green-300">
+                <Counter end={10} />+
+              </p>
+              <p className="text-sm text-gray-200">States Served</p>
+            </div>
+
+            <div>
+              <p className="text-3xl font-bold text-green-200">
+                <Counter end={5} />k+
+              </p>
+              <p className="text-sm text-gray-200">Lives Impacted</p>
+            </div>
+
+            <div>
+              <p className="text-3xl font-bold text-orange-300">
+                <Counter end={15} />+
+              </p>
+              <p className="text-sm text-gray-200">Active Programs</p>
+            </div>
           </div>
 
         </div>

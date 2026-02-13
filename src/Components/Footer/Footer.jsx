@@ -1,7 +1,30 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
+import { useState } from "react";
+import axios from "axios";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await axios.post("http://localhost:5000/api/newsletter/subscribe", {
+        email,
+      });
+
+      alert("Subscribed successfully!");
+      setEmail("");
+    } catch (error) {
+      alert("Subscription failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-[#0f172a] text-gray-400">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-16">
@@ -48,11 +71,11 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/focus-areas" className="hover:text-white">
                   Focus Areas
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/impact" className="hover:text-white">
                   Our Impact
@@ -100,18 +123,21 @@ const Footer = () => {
               Stay updated with our latest news and impact stories.
             </p>
 
-            <form className="mt-6 space-y-4">
+            <form onSubmit={handleSubscribe} className="mt-6 space-y-4">
               <input
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
-                aria-label="Email address"
                 className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-600"
               />
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full rounded-xl bg-green-700 py-3 font-semibold text-white transition hover:bg-green-600"
               >
-                Subscribe
+                {loading ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           </div>
