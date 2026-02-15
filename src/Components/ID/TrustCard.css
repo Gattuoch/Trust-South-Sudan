@@ -1,146 +1,157 @@
-.card {
-  width: 420px;
-  height: 720px;
-  background: #f2f2f2;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  font-family: "Poppins", Arial, sans-serif;
-}
-
-/* ===================== TOP HEADER ===================== */
-.top-header {
-  position: absolute;
-  top: -130px;
-  left: -10%;
-  width: 120%;
-  height: 370px;
-  background: #0f6d87;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 40px 80px 40px;
-}
-
-/* Logo */
-.logo {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: white;
-  padding: 6px;
-  object-fit: contain;
-}
-
-/* Title */
-.title {
-  text-align: right;
-}
-
-.title h1 {
-  margin: 0;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  color: black;
-  -webkit-text-stroke: 2px white;
-}
-
-.title h2 {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 800;
-}
-
-.south {
-  color: #e53935;
-}
-
-.sudan {
-  color: #43a047;
-}
-
-/* ===================== SIDEBAR ===================== */
-.sidebar {
-  position: absolute;
-  top: 280px;
-  left: 0;
-  width: 90px;
-  bottom: 0;
-  background: #0955e2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 50px;
-  gap: 45px;
-  z-index: 1;
-}
-
-/* Green curved shapes */
-.sidebar::before,
-.sidebar::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: #4caf50;
-  border-radius: 60px;
-  left: -40px;
-  z-index: 0;
-}
-
-.sidebar::before {
-  top: -50px;
-}
-
-.sidebar::after {
-  bottom: -50px;
-}
-
-/* Icons */
-.icon {
-  background: black;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+/* ===== CENTER PAGE ===== */
+.page-center {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 18px;
+  background: #e6e6e6;
+}
+
+/* ===== CARD ===== */
+.card-container {
+  width: 420px;
+  height: 650px;
+  background: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== TOP HEADER ===== */
+.top-header {
+  width: 100%;
+  height: 250px;
+  background: #0e6f8f;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+.trust {
+  font-size: 42px;
+  color: black;
+  -webkit-text-stroke: 2px white;
+  margin: 0;
+}
+
+.south {
+  color: red;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.sudan {
+  color: green;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.left-bar {
+  position: absolute;
+  top: 210px;
+  left: 0;
+  width: 70px;
+  height: 350px;
+  background: #0e6f8f;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  gap: 38px;
   z-index: 2;
 }
 
-/* ===================== CONTENT ===================== */
+/* ===== SIDEBAR ICONS ===== */
+.sidebar-icon {
+  width: 40px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  
+}
+
+/* ===== CONTENT ===== */
 .content {
   position: absolute;
-  top: 330px;
-  left: 120px;
-  right: 30px;
-  font-size: 20px;
-  color: #111;
-  font-weight: 500;
+  top: 280px;
+  left: 100px;
+  right: 20px;
 }
 
-.content p {
-  margin: 12px 0;
-  line-height: 1.6;
+.info {
+  margin-bottom: 42px;
 }
 
-.space {
-  margin-top: 28px;
+.info p {
+  margin: 4px 0;
+  font-size: 16px;
 }
 
-/* ===================== BOTTOM SHAPE ===================== */
-.bottom-shape {
+/* ===== GREEN TOP LEFT SHAPE ===== */
+.green-left-top {
   position: absolute;
-  bottom: -90px;
-  left: -20%;
-  width: 150%;
-  height: 220px;
-  background: #4caf50;
-  transform: rotate(-6deg);
-  padding: 0 40px;;
+  top: 200px;
+  left: -60px;
+  width: 140px;
+  height: 140px;
+  background: #59b548;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+/* ===== GREEN BOTTOM LEFT SHAPE ===== */
+.green-left-bottom {
+  position: absolute;
+  bottom: 60px;
+  left: -60px;
+  width: 150px;
+  height: 90px;
+  background: #59b548;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+
+.green-diagonal {
+  position: absolute;
+  bottom: -60px;
+  right: -40px;
+  width: 380px;
+  height: 120px;
+  background: #59b548;
+  transform: rotate(-12deg);
+}
+
+/* ===== BOTTOM BLACK LINE ===== */
+.bottom-black-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: black;
 }

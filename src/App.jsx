@@ -31,6 +31,9 @@ import Terms from "./Components/Terms/Terms";
 import CookiePolicy from "./Components/CookiePolicy";
 import TrustSouthSudanCard from "./Components/ID/TrustSouthSudanCard";
 import TrustSouthSudanPoster from "./Components/ID/TrustSouthSudanPoster";
+import TrustCard from "./Components/ID/TrustSouthSudanCard";
+import TrustIDCard from "./Components/ID/TrustIDCard";
+import TrustCertificate from "./Components/ID/TrustCertificate";
 
 function App() {
   const location = useLocation();
@@ -44,7 +47,8 @@ function App() {
     location.pathname === "/admin/jobs" ||
     location.pathname === "/super-admin/admin-management" ||
     location.pathname === "/TrustSouthSudanCard" ||
-    location.pathname === "/trust-south-sudan-poster";
+    location.pathname === "/trust-south-sudan-poster" ||
+    location.pathname === "/id/nyaliep-kuany";
 
   return (
     <>
@@ -107,6 +111,10 @@ function App() {
         <Route path="/admin/jobs" element={<AdminJobsPage />} />
         <Route path="/TrustSouthSudanCard" element={<TrustSouthSudanCard />} />
         <Route path="/trust-south-sudan-poster" element={<TrustSouthSudanPoster/>} />
+        <Route path="/id/nyaliep-kuany" element={
+          <> <TrustIDCard/> 
+           <TrustCertificate/>
+             </>} />
         <Route
           path="/super-admin/admin-management"
           element={<AdminManagement />}
