@@ -34,6 +34,16 @@ import TrustSouthSudanPoster from "./Components/ID/TrustSouthSudanPoster";
 import TrustCard from "./Components/ID/TrustSouthSudanCard";
 import TrustIDCard from "./Components/ID/TrustIDCard";
 import TrustCertificate from "./Components/ID/TrustCertificate";
+import TrustIDCard01 from "./Components/ID/TrustIDCard01";
+import TrustIDCard02 from "./Components/ID/TrustIDCard02";
+import TrustIDCard03 from "./Components/ID/TrustIDCard03";
+import TrustIDCard04 from "./Components/ID/TrustIDCard04";
+import TrustIDCard06 from "./Components/ID/TrustIDCard06";
+import TrustIDCard07 from "./Components/ID/TrustIDCard07";
+import TrustIDCard08 from "./Components/ID/TrustIDCard08";
+import TrustIDCard10 from "./Components/ID/TrustIDCard10";
+import TrustIDCard11 from "./Components/ID/TrustIDCard11";
+import TrustIDCard13 from "./Components/ID/TrustIDCard13";
 
 function App() {
   const location = useLocation();
@@ -48,7 +58,17 @@ function App() {
     location.pathname === "/super-admin/admin-management" ||
     location.pathname === "/TrustSouthSudanCard" ||
     location.pathname === "/trust-south-sudan-poster" ||
-    location.pathname === "/id/nyaliep-kuany";
+    location.pathname === "/id/nyaliep-kuany" ||
+    location.pathname === "/id/david-dak" ||
+    location.pathname === "/id/david-bidong-nhial"  ||
+    location.pathname === "/id/gatwech-chang-dojiok"||
+    location.pathname === "/id/banak-bidong" ||
+    location.pathname === "/id/maar-naath-koryom" ||
+    location.pathname === "/id/nyanhial-gatkuoth-thian" ||
+    location.pathname === "/id/peter-gony" ||
+    location.pathname === "/id/changkuoth-riek" ||
+    location.pathname === "/id/gattuoch-chambang"  ||
+    location.pathname === "/id/kayier-yout";
 
   return (
     <>
@@ -115,6 +135,46 @@ function App() {
           <> <TrustIDCard/> 
            <TrustCertificate/>
              </>} />
+         <Route path="/id/david-dak" element={
+          <> <TrustIDCard01/> 
+           <TrustCertificate/>
+             </>} />
+        <Route path="/id/david-bidong-nhial" element={
+          <> <TrustIDCard02/> 
+           <TrustCertificate/>
+             </>} />
+        <Route path="/id/gatwech-chang-dojiok" element={
+          <> <TrustIDCard03/> 
+           <TrustCertificate/>
+             </>} />
+        <Route path="/id/banak-bidong" element={
+          <> <TrustIDCard04/> 
+           <TrustCertificate/>
+             </>} />    
+        <Route path="/id/maar-naath-koryom" element={
+          <> <TrustIDCard06/> 
+           <TrustCertificate/>
+             </>} />
+        <Route path="/id/nyanhial-gatkuoth-thian" element={
+          <> <TrustIDCard07/> 
+           <TrustCertificate/>
+             </>} /> 
+        <Route path="/id/peter-gony" element={
+          <> <TrustIDCard08/> 
+           <TrustCertificate/>
+             </>} />
+         <Route path="/id/changkuoth-riek" element={
+          <> <TrustIDCard10/> 
+           <TrustCertificate/>
+             </>} />
+        <Route path="/id/gattuoch-chambang" element={
+          <> <TrustIDCard11/> 
+           <TrustCertificate/>
+             </>} />
+        <Route path="/id/kayier-yout" element={
+          <> <TrustIDCard13/> 
+           <TrustCertificate/>
+             </>} />                       
         <Route
           path="/super-admin/admin-management"
           element={<AdminManagement />}
