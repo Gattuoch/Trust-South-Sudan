@@ -136,7 +136,7 @@ export default function TrustIDCard() {
         space-y-2 
         font-medium
       ">
-        <p><span className="font-bold">ID No:-</span> 05</p>
+        <p><span className="font-bold">ID No:-</span> 005</p>
         <p><span className="font-bold">Gender:-</span> Female</p>
         <p><span className="font-bold">Nationality:-</span> South Sudanese</p>
         <p><span className="font-bold">Location:-</span> Juba Head Office</p>
