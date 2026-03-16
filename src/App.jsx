@@ -46,6 +46,10 @@ import TrustIDCard11 from "./Components/ID/TrustIDCard11";
 import TrustIDCard13 from "./Components/ID/TrustIDCard13";
 import TrustIDCard14 from "./Components/ID/TrustIDCard14";
 import TrustIDCard12 from "./Components/ID/TrustIDCard12";
+import TrustIDCard17 from "./Components/ID/TrustIDCard17";
+import TrustIDCard15 from "./Components/ID/TrustIDCard15";
+import TrustIDCard16 from "./Components/ID/TrustIDCard16";
+import TrustIDCard014 from "./Components/ID/TrustIDCard014";
 
 function App() {
   const location = useLocation();
@@ -72,7 +76,11 @@ function App() {
     location.pathname === "/id/gattuoch-chambang"  ||
     location.pathname === "/id/kayier-yout" ||
     location.pathname === "/id/jal-ruot" ||
-    location.pathname === "/id/james-toang";
+    location.pathname === "/id/james-toang" ||
+    location.pathname === "/id/nyamuoch-kuey" ||
+    location.pathname === "/id/chuol-puar" ||
+    location.pathname === "/id/stephen-kuel" ||
+    location.pathname === "/id/pal-khot";
 
 
   return (
@@ -187,7 +195,24 @@ function App() {
         <Route path="/id/james-toang" element={
           <> <TrustIDCard12/> 
            <TrustCertificate/>
-             </>} />                                
+             </>} />   
+         <Route path="/id/nyamuoch-kuey" element={
+                  <> <TrustIDCard17/> 
+                   <TrustCertificate/>
+                     </>} />       
+        
+        <Route path="/id/chuol-puar" element={
+                  <> <TrustIDCard15/> 
+                   <TrustCertificate/>
+                     </>} />
+        <Route path="/id/stephen-kuel" element={
+                  <> <TrustIDCard16/> 
+                   <TrustCertificate/>
+                     </>} />
+       <Route path="/id/pal-khot" element={
+                  <> <TrustIDCard014/> 
+                   <TrustCertificate/>
+                     </>} />                                     
         <Route
           path="/super-admin/admin-management"
           element={<AdminManagement />}

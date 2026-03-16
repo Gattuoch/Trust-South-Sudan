@@ -4,7 +4,7 @@ import AdminList from "./AdminList";
 import AdminForm from "./AdminForm";
 import AdminPermissions from "./AdminPermissions";
 import { Toaster } from "react-hot-toast";
-import Sidebar from "../../SuperAdmin Panel/Sidebar/Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 import { Plus } from "lucide-react";
 
 export default function AdminManagement() {

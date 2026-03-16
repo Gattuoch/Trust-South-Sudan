@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Sidebar from "../Sidebar/Sidebar.jsx";
-import axios from "../../../utils/axios";
+import axios from "../../../utils/axios.js";
 
 const SuperAdminDashboard = () => {
   const [openSidebar, setOpenSidebar] = useState(false);

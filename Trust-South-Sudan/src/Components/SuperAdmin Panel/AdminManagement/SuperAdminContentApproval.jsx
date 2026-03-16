@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import Navbar from "../../SuperAdmin Panel/Sidebar/Navbar";
+import Navbar from "../Sidebar/Navbar";
 import { getPendingContent } from "../../../api/approval.api";
-import ApprovalActions from "../../SuperAdmin Panel/approval/ApprovalActions";
+import ApprovalActions from "../approval/ApprovalActions";
 
 export default function SuperAdminContentApproval() {
   const [pendingNews, setPendingNews] = useState([]);
