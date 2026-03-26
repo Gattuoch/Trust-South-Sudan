@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
-import aboutImg from "../../assets/peacebuildingforall.png"; // replace with your image path
-import heroImage3 from "../../assets/impact6.png";
-import heroImage1 from "../../assets/impact5.png";
-import heroImage2 from "../../assets/peace.png";
+import trust1 from "../../assets/trust image 1.jpg";
+import trust2 from "../../assets/trust image 2.jpg";
+import trust3 from "../../assets/trust image 3.jpg";
 
 const About = () => {
-  const images = [heroImage1];
+  const images = [trust1, trust2, trust3];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 1000); // 1 second
+    }, 3000); // 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -20,11 +19,11 @@ const About = () => {
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
 
         {/* Image */}
-        <div className="relative">
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
           <img
             src={images[currentIndex]}
             alt="Community unity"
-            className="w-full h-full rounded-3xl object-cover"
+            className="absolute inset-0 w-full h-full rounded-3xl object-cover shadow-xl transition-all duration-700"
           />
         </div>
 

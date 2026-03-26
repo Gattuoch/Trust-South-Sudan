@@ -13,9 +13,12 @@ import {
   FaHeartbeat,
 } from "react-icons/fa";
 
-import heroImage1 from "../../assets/impact1.png";
-import heroImage2 from "../../assets/impact2.png";
-import heroImage3 from "../../assets/impact3.png";
+import trust1 from "../../assets/trust image 1.jpg";
+import trust2 from "../../assets/trust image 2.jpg";
+import trust3 from "../../assets/trust image 3.jpg";
+import trust4 from "../../assets/trust image 4.jpg";
+import trust5 from "../../assets/trust image 5.jpg";
+import trust6 from "../../assets/trust image 6.jpg";
 
 // =======================
 // Animations
@@ -136,7 +139,7 @@ const programs = [
 // Component
 // =======================
 const Programs = () => {
-  const images = [heroImage1, heroImage2, heroImage3];
+  const images = [trust1, trust2, trust3, trust4, trust5, trust6];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

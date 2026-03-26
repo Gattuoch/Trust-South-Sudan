@@ -3,13 +3,9 @@ import {
   LuMail,
   LuPhone
 } from "react-icons/lu";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
+import trust6 from "../../assets/trust image 6.jpg";
 
 
 export default function ContactUs() {
@@ -152,6 +148,11 @@ export default function ContactUs() {
                   <FaInstagram />
                 </a>
               </div>
+            </div>
+
+            {/* Img section for visual punch on the left side */}
+            <div className="mt-12 rounded-3xl overflow-hidden shadow-lg border-2 border-emerald-50 relative group">
+              <img src={trust6} alt="Contact Us" className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
           </div>
 
