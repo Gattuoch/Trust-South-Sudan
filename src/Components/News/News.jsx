@@ -1,5 +1,5 @@
-import {  FaUsers, FaGavel} from "react-icons/fa";
-import { LuCalendar} from "react-icons/lu";
+import { FaUsers, FaGavel } from "react-icons/fa";
+import { LuCalendar } from "react-icons/lu";
 
 
 export default function News() {
@@ -46,7 +46,7 @@ export default function News() {
               Legal Aid Success
             </h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              We provided legal representation and advocacy for 1,200+ conflict-affected families, helping them access justice and protection from human rights violations. 
+              We provided legal representation and advocacy for 1,200+ conflict-affected families, helping them access justice and protection from human rights violations.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -65,7 +65,7 @@ export default function News() {
               Youth Leadership Program
             </h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              We trained 15,000+ youth in leadership, conflict resolution, and life skills, creating a generation of peacebuilders and community leaders. 
+              We trained 15,000+ youth in leadership, conflict resolution, and life skills, creating a generation of peacebuilders and community leaders.
             </p>
 
             <div className="space-y-4 mb-8">

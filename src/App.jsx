@@ -5,6 +5,7 @@ import Navbar from "./Components/Home/Navar";
 import Footer from "./Components/Footer/Footer";
 
 import Hero from "./Components/Home/Hero";
+import VideoHighlight from "./Components/Home/VideoHighlight";
 import Mission from "./Components/Home/Mission";
 import Impact from "./Components/Home/Impact";
 import About from "./Components/AboutUs/About";
@@ -94,6 +95,7 @@ function App() {
           element={
             <>
               <Hero />
+              <VideoHighlight />
               <Mission />
               <Impact />
             </>

@@ -6,15 +6,15 @@ import heroImage2 from "../../assets/peace.png";
 
 const About = () => {
   const images = [heroImage1];
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-      }, 1000); // 1 second
-  
-      return () => clearInterval(interval);
-    }, []);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 1000); // 1 second
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="bg-white py-24 px-6 lg:px-16">
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">

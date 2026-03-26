@@ -28,72 +28,72 @@ const MissionVision = () => {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#73e2ab] text-white">
               <FiTarget className="text-xl" />
             </div>
-           <h3 className="mt-6 text-2xl font-bold">Mission</h3>
+            <h3 className="mt-6 text-2xl font-bold">Mission</h3>
 
-<p className="mt-4 text-gray-600 text-sm leading-relaxed">
-  Our goal encompasses the aspirations of all South Sudanese citizens and goes
-  beyond conventional bounds. It is an appeal for everyone to contribute to the
-  reconstruction of our society—one that not only mends the scars of the past
-  but also creates a fair foundation for coming generations. As we set out on
-  this transformative journey toward reconciliation and development, we extend
-  an invitation to local and international partners to collaborate with us.
-  Together, we can build a thriving South Sudan with a shared goal and a rich
-  cultural legacy.
-</p>
+            <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+              Our goal encompasses the aspirations of all South Sudanese citizens and goes
+              beyond conventional bounds. It is an appeal for everyone to contribute to the
+              reconstruction of our society—one that not only mends the scars of the past
+              but also creates a fair foundation for coming generations. As we set out on
+              this transformative journey toward reconciliation and development, we extend
+              an invitation to local and international partners to collaborate with us.
+              Together, we can build a thriving South Sudan with a shared goal and a rich
+              cultural legacy.
+            </p>
 
-<p className="mt-4 text-gray-600 text-sm leading-relaxed">
-  Trust South Sudan is on a mission to promote peace, reconciliation, and
-  sustainable development across our nation by engaging individuals and
-  communities in transformative initiatives that combat division and foster
-  collaboration. Our mission focuses on the following core areas:
-</p>
+            <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+              Trust South Sudan is on a mission to promote peace, reconciliation, and
+              sustainable development across our nation by engaging individuals and
+              communities in transformative initiatives that combat division and foster
+              collaboration. Our mission focuses on the following core areas:
+            </p>
 
-<ul className="mt-4 list-disc pl-5 space-y-3 text-gray-600 text-sm leading-relaxed">
-  <li>
-    <strong>Community Dialogue and Engagement:</strong> Establishing safe spaces
-    for indigenous tribes to communicate through workshops, forums, and dialogue
-    sessions that encourage open discussion, mutual understanding, and
-    cooperative problem-solving.
-  </li>
+            <ul className="mt-4 list-disc pl-5 space-y-3 text-gray-600 text-sm leading-relaxed">
+              <li>
+                <strong>Community Dialogue and Engagement:</strong> Establishing safe spaces
+                for indigenous tribes to communicate through workshops, forums, and dialogue
+                sessions that encourage open discussion, mutual understanding, and
+                cooperative problem-solving.
+              </li>
 
-  <li>
-    <strong>Inclusive Education Programs:</strong> Promoting access to quality
-    education by implementing inclusive learning initiatives and scholarship
-    programs for students from underprivileged families.
-  </li>
+              <li>
+                <strong>Inclusive Education Programs:</strong> Promoting access to quality
+                education by implementing inclusive learning initiatives and scholarship
+                programs for students from underprivileged families.
+              </li>
 
-  <li>
-    <strong>Advocacy for Equitable Policies:</strong> Advancing policy reforms at
-    local and national levels to address the root causes of violence and
-    corruption, while promoting social justice, accountability, and transparency
-    through collaboration with civil society and government institutions.
-  </li>
+              <li>
+                <strong>Advocacy for Equitable Policies:</strong> Advancing policy reforms at
+                local and national levels to address the root causes of violence and
+                corruption, while promoting social justice, accountability, and transparency
+                through collaboration with civil society and government institutions.
+              </li>
 
-  <li>
-    <strong>Restorative Justice Initiatives:</strong> Supporting reconciliation
-    by acknowledging past harms and promoting restorative justice practices that
-    rebuild trust and enable communities to move forward together.
-  </li>
+              <li>
+                <strong>Restorative Justice Initiatives:</strong> Supporting reconciliation
+                by acknowledging past harms and promoting restorative justice practices that
+                rebuild trust and enable communities to move forward together.
+              </li>
 
-  <li>
-    <strong>Sustainable Economic Development:</strong> Expanding economic
-    opportunities through cooperative enterprises and entrepreneurship support,
-    including initiatives that connect farmers to markets for fair pricing and
-    stable income.
-  </li>
+              <li>
+                <strong>Sustainable Economic Development:</strong> Expanding economic
+                opportunities through cooperative enterprises and entrepreneurship support,
+                including initiatives that connect farmers to markets for fair pricing and
+                stable income.
+              </li>
 
-  <li>
-    <strong>Environmental Protection and Sustainability:</strong> Encouraging
-    responsible environmental stewardship through sustainable agriculture,
-    natural resource conservation, and food security initiatives.
-  </li>
+              <li>
+                <strong>Environmental Protection and Sustainability:</strong> Encouraging
+                responsible environmental stewardship through sustainable agriculture,
+                natural resource conservation, and food security initiatives.
+              </li>
 
-  <li>
-    <strong>Monitoring and Evaluation:</strong> Continuously assessing and
-    improving our programs through feedback, evaluation, and adaptive learning
-    to maximize impact and effectiveness.
-  </li>
-</ul>
+              <li>
+                <strong>Monitoring and Evaluation:</strong> Continuously assessing and
+                improving our programs through feedback, evaluation, and adaptive learning
+                to maximize impact and effectiveness.
+              </li>
+            </ul>
 
           </div>
 
@@ -104,60 +104,60 @@ const MissionVision = () => {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white">
               <FaQuoteLeft className="text-xl" />
             </div>
-      <h3 className="mt-8 text-3xl font-extrabold text-gray-800 tracking-wide">
-  GOALS AND MANDATE
-</h3>
+            <h3 className="mt-8 text-3xl font-extrabold text-gray-800 tracking-wide">
+              GOALS AND MANDATE
+            </h3>
 
-{/* Goals */}
-<div className="mt-6 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-3">
-  <h4 className="text-xl font-bold text-gray-800 mb-3">Our Goals</h4>
+            {/* Goals */}
+            <div className="mt-6 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-3">
+              <h4 className="text-xl font-bold text-gray-800 mb-3">Our Goals</h4>
 
-  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-    <li>Promote sustainable peacebuilding and national reconciliation</li>
-    <li>Strengthen national unity and social cohesion</li>
-    <li>Advance transitional justice, accountability, and healing</li>
-    <li>Protect and promote human rights and human dignity</li>
-    <li>Combat corruption and promote good governance</li>
-    <li>Empower women and youth as agents of peace and transformation</li>
-    <li>Drive sustainable development transformation linked to peace</li>
-  </ul>
-</div>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Promote sustainable peacebuilding and national reconciliation</li>
+                <li>Strengthen national unity and social cohesion</li>
+                <li>Advance transitional justice, accountability, and healing</li>
+                <li>Protect and promote human rights and human dignity</li>
+                <li>Combat corruption and promote good governance</li>
+                <li>Empower women and youth as agents of peace and transformation</li>
+                <li>Drive sustainable development transformation linked to peace</li>
+              </ul>
+            </div>
 
-{/* Mandates */}
-<div className="mt-8 rounded-xl border border-gray-200 bg-white shadow-sm p-6">
-  <h4 className="text-xl font-bold text-gray-800 mb-3">Our Mandates</h4>
+            {/* Mandates */}
+            <div className="mt-8 rounded-xl border border-gray-200 bg-white shadow-sm p-6">
+              <h4 className="text-xl font-bold text-gray-800 mb-3">Our Mandates</h4>
 
-  <ul className="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
-    <li>
-      Design and implement conflict-sensitive peacebuilding initiatives that reduce violence,
-      prevent retaliation, and foster long-term reconciliation at grassroots and national levels.
-    </li>
-    <li>
-      Promote inclusive civic engagement, inter-ethnic dialogue, and social cohesion programs
-      that unite communities around shared national values and a common destiny.
-    </li>
-    <li>
-      Advocate for and support transitional justice mechanisms, including community-based accountability,
-      reparations, and institutional reforms that restore dignity to victims and strengthen the rule of law.
-    </li>
-    <li>
-      Monitor, document, and advocate against human rights violations while strengthening local human
-      rights awareness, protection, and response mechanisms in partnership with national and international actors.
-    </li>
-    <li>
-      Support anti-corruption advocacy, civic oversight, and governance reforms that strengthen accountability,
-      public participation, and responsible leadership.
-    </li>
-    <li>
-      Promote meaningful participation of women and youth in peace processes, leadership, economic empowerment,
-      and community development initiatives.
-    </li>
-    <li>
-      Implement people-centered, conflict-sensitive development programs that improve livelihoods, strengthen resilience,
-      and reduce drivers of conflict.
-    </li>
-  </ul>
-</div>
+              <ul className="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
+                <li>
+                  Design and implement conflict-sensitive peacebuilding initiatives that reduce violence,
+                  prevent retaliation, and foster long-term reconciliation at grassroots and national levels.
+                </li>
+                <li>
+                  Promote inclusive civic engagement, inter-ethnic dialogue, and social cohesion programs
+                  that unite communities around shared national values and a common destiny.
+                </li>
+                <li>
+                  Advocate for and support transitional justice mechanisms, including community-based accountability,
+                  reparations, and institutional reforms that restore dignity to victims and strengthen the rule of law.
+                </li>
+                <li>
+                  Monitor, document, and advocate against human rights violations while strengthening local human
+                  rights awareness, protection, and response mechanisms in partnership with national and international actors.
+                </li>
+                <li>
+                  Support anti-corruption advocacy, civic oversight, and governance reforms that strengthen accountability,
+                  public participation, and responsible leadership.
+                </li>
+                <li>
+                  Promote meaningful participation of women and youth in peace processes, leadership, economic empowerment,
+                  and community development initiatives.
+                </li>
+                <li>
+                  Implement people-centered, conflict-sensitive development programs that improve livelihoods, strengthen resilience,
+                  and reduce drivers of conflict.
+                </li>
+              </ul>
+            </div>
 
 
           </div>

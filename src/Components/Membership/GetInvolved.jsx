@@ -28,9 +28,9 @@ export default function GetInvolved() {
               sustainable development initiatives.
             </p>
             <a href="/donate">
-            <button className="rounded-xl bg-emerald-700 px-8 py-3 text-white font-semibold hover:bg-emerald-800 transition cursor-pointer">
-              Make a Donation
-            </button>
+              <button className="rounded-xl bg-emerald-700 px-8 py-3 text-white font-semibold hover:bg-emerald-800 transition cursor-pointer">
+                Make a Donation
+              </button>
             </a>
           </div>
 

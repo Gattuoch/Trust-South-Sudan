@@ -110,7 +110,7 @@ const stories = [
     title: "Support to Vulnerable Groups",
     desc:
       "Implemented small-scale livelihood and psychosocial support programs empowering vulnerable women, widows, internally displaced persons, and conflict-affected youth—enhancing resilience, dignity, and social stability.",
-    image: VulnerableGroups ,
+    image: VulnerableGroups,
     color: "text-orange-500",
   },
   {
