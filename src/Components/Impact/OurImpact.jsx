@@ -1,131 +1,119 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  FaMapMarkedAlt,
-  FaHeart,
-  FaHandshake,
+  FaBriefcase,
+  FaDove,
+  FaTint,
+  FaFemale,
   FaUsers,
+  FaChartLine,
+  FaCogs,
+  FaClipboardCheck,
+  FaCheckCircle
 } from "react-icons/fa";
 
-import Building from "../../assets/Building-Bridges.png";
-import Empowering from "../../assets/Empowering-Women-Leaders.png";
-import Youth from "../../assets/Youth-Leading-Change.png";
-import Sensitization from "../../assets/Sensitization.png";
-import VulnerableGroups from "../../assets/VulnerableGroups.png";
-import FutureImpact from "../../assets/future-impact.png";
-import YouthUnity from "../../assets/Youth-unity.png";
-import Peace from "../../assets/Peace.png";
-import Achievements from "../../assets/Achievements.png";
-
 /* =======================
-   Counter Component
+   Impact Data
 ======================= */
-const Counter = ({ end, duration = 2 }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration * 60);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        clearInterval(timer);
-        setCount(end);
-      } else {
-        setCount(start);
-      }
-    }, 1000 / 60);
-
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return Math.floor(count);
-};
-
-/* =======================
-   Stats Data
-======================= */
-const stats = [
+const impactData = [
   {
-    icon: <FaMapMarkedAlt />,
-    value: 8,
-    suffix: "+",
-    label: "Counties Reached",
-    color: "text-green-700",
-    bg: "bg-green-50",
+    title: "Livelihood Support",
+    icon: <FaBriefcase />,
+    gradient: "from-emerald-400 to-teal-600",
+    shadow: "shadow-teal-200/50",
+    textColor: "text-teal-700",
+    points: [
+      "Provide vocational skills training (tailoring, agriculture, small business)",
+      "Distribute start-up kits and small grants",
+      "Support farmer groups with seeds and tools",
+    ],
   },
   {
-    icon: <FaHeart />,
-    value: 3000,
-    suffix: "+",
-    label: "Lives Positively Impacted",
-    color: "text-emerald-600",
-    bg: "bg-emerald-50",
+    title: "Peace building & Social Cohesion",
+    icon: <FaDove />,
+    gradient: "from-blue-400 to-indigo-600",
+    shadow: "shadow-blue-200/50",
+    textColor: "text-blue-700",
+    points: [
+      "Facilitate community dialogue sessions",
+      "Train youth and local leaders in conflict resolution",
+      "Establish community peace committees",
+    ],
   },
   {
-    icon: <FaHandshake />,
-    value: 120,
-    suffix: "+",
-    label: "Peace Dialogues Facilitated",
-    color: "text-blue-600",
-    bg: "bg-blue-50",
+    title: "WASH & Health Interventions",
+    icon: <FaTint />,
+    gradient: "from-cyan-400 to-blue-500",
+    shadow: "shadow-cyan-200/50",
+    textColor: "text-cyan-700",
+    points: [
+      "Rehabilitate boreholes and water points",
+      "Conduct hygiene promotion campaigns",
+      "Train community health volunteers",
+    ],
   },
   {
+    title: "Women & Youth Empowerment",
+    icon: <FaFemale />,
+    gradient: "from-pink-400 to-rose-500",
+    shadow: "shadow-pink-200/50",
+    textColor: "text-pink-700",
+    points: [
+      "Establish safe spaces for women and girls",
+      "Deliver life skills and leadership training",
+      "Support gender-based violence (GBV) awareness and prevention",
+    ],
+  },
+  {
+    title: "Target Beneficiaries",
     icon: <FaUsers />,
-    value: 900,
-    suffix: "+",
-    label: "Youth & Community Leaders Engaged",
-    color: "text-orange-500",
-    bg: "bg-orange-50",
-  },
-];
-
-/* =======================
-   Stories / Impact Areas
-======================= */
-const stories = [
-  {
-    title: "Previous Achievements",
-    desc:
-      "Despite ongoing conflict, fragility, and social mistrust in South Sudan, TRUST South Sudan has demonstrated its ability to deliver tangible, community-led, and peace-focused outcomes that positively impact lives and strengthen social cohesion.",
-    image: Achievements,
-    color: "text-green-700",
+    gradient: "from-orange-400 to-amber-500",
+    shadow: "shadow-orange-200/50",
+    textColor: "text-orange-700",
+    points: [
+      "Vulnerable households (internally displaced persons and host communities)",
+      "Women and girls",
+      "Unemployed youth",
+      "Community leaders and local structures",
+      "Estimated Reach: 10,000+ direct beneficiaries",
+    ],
   },
   {
-    title: "Peace & Reconciliation",
-    desc:
-      "Facilitated community peace forums involving conflicting youth groups, traditional leaders, women, and religious leaders in selected counties—reducing tensions, restoring dialogue, and rebuilding trust among divided communities.",
-    image: Peace,
-    color: "text-emerald-600",
+    title: "Expected Results",
+    icon: <FaChartLine />,
+    gradient: "from-violet-400 to-purple-600",
+    shadow: "shadow-violet-200/50",
+    textColor: "text-violet-700",
+    points: [
+      "Increased household income and food security",
+      "Reduced interconnected conflicts",
+      "Improved access to clean water and hygiene practices",
+      "Enhanced protection and empowerment of women and youth",
+    ],
   },
   {
-    title: "Youth Unity & Leadership Empowerment",
-    desc:
-      "Organized youth leadership and cultural exchange initiatives that brought together young people from different ethnic backgrounds to participate in joint social and development activities, fostering unity and a shared national identity.",
-    image: YouthUnity,
-    color: "text-blue-600",
+    title: "Implementation Strategy",
+    icon: <FaCogs />,
+    gradient: "from-yellow-400 to-orange-500",
+    shadow: "shadow-yellow-200/50",
+    textColor: "text-yellow-700",
+    points: [
+      "Work closely with local authorities and community leaders",
+      "Use participatory approaches to ensure community ownership",
+      "Coordinate with clusters and partners such as UNICEF, World Food Programme, and United Nations Development Programmed",
+    ],
   },
   {
-    title: "Support to Vulnerable Groups",
-    desc:
-      "Implemented small-scale livelihood and psychosocial support programs empowering vulnerable women, widows, internally displaced persons, and conflict-affected youth—enhancing resilience, dignity, and social stability.",
-    image: VulnerableGroups,
-    color: "text-orange-500",
-  },
-  {
-    title: "Community Sensitization & Awareness",
-    desc:
-      "Conducted civic education and awareness campaigns on peacebuilding, coexistence, genocide prevention, and social cohesion, strengthening informed participation and community responsibility.",
-    image: Sensitization,
-    color: "text-purple-600",
-  },
-  {
-    title: "Future Impact & Expansion",
-    desc:
-      "With stronger partnerships and sufficient funding, TRUST South Sudan aims to expand reconciliation programs, promote national unity beyond tribal lines, strengthen livelihoods, support governance, and advance climate resilience for long-term national recovery.",
-    image: FutureImpact,
-    color: "text-teal-600",
+    title: "Monitoring & Evaluation",
+    icon: <FaClipboardCheck />,
+    gradient: "from-indigo-400 to-blue-700",
+    shadow: "shadow-indigo-200/50",
+    textColor: "text-indigo-700",
+    points: [
+      "Baseline and end line assessments",
+      "Regular field monitoring visits & feedback mechanisms",
+      "Monthly and quarterly progress reports",
+      "Key indicators: Reach 5000 beneficiaries, 70% income increase, reduced conflicts, access to clean water",
+    ],
   },
 ];
 
@@ -133,11 +121,21 @@ const stories = [
    Animation
 ======================= */
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+    },
   },
 };
 
@@ -146,94 +144,88 @@ const fadeUp = {
 ======================= */
 const OurImpact = () => {
   return (
-    <section className="bg-[#fafafa] py-28 px-6 lg:px-16">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative bg-slate-50 py-28 px-6 lg:px-16 overflow-hidden">
+      {/* Decorative Background Blobs */}
+      <div className="absolute top-10 left-[-10%] w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob"></div>
+      <div className="absolute top-20 right-[-10%] w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-2000"></div>
+      <div className="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-4000"></div>
 
+      <div className="relative mx-auto max-w-7xl z-10">
         {/* Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
-          className="text-center"
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center max-w-4xl mx-auto mb-20"
         >
-          <h2 className="text-4xl font-bold text-gray-900">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/50 border border-blue-200 mb-6 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            <span className="text-sm font-semibold tracking-wide text-blue-700 uppercase">
+              Proven Results
+            </span>
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 mb-8 leading-tight">
             Our Impact
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Peacebuilding, unity, and sustainable development in action
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-light">
+            Trust South Sudan has successfully delivered community-based humanitarian and peace
+            building programs reaching over <strong className="font-semibold text-blue-600">10,000 beneficiaries</strong> across conflict-affected areas.
+            With strong local networks and proven results in women Rise, livelihoods, and protection,
+            we are well-positioned to partner with international and national NGOs to scale impact
+            across South Sudan.
           </p>
         </motion.div>
 
-        {/* Stats */}
+        {/* Strategies / Impact Areas */}
         <motion.div
+          variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
-          className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
         >
-          {stats.map((item, i) => (
+          {impactData.map((item, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
-              whileHover={{ y: -6 }}
-              className="rounded-2xl bg-white p-10 text-center shadow-sm hover:shadow-md transition"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative rounded-3xl bg-white/70 backdrop-blur-xl border border-white/50 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full overflow-hidden"
             >
-              <div
-                className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full ${item.bg} ${item.color}`}
-              >
-                <span className="text-xl">{item.icon}</span>
+              {/* Subtle gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+
+              <div className="relative z-10 flex flex-col h-full">
+                <div
+                  className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} text-white shadow-lg ${item.shadow} mb-8 transform group-hover:rotate-6 transition-transform duration-300`}
+                >
+                  <span className="text-3xl drop-shadow-sm">{item.icon}</span>
+                </div>
+
+                <div className="flex items-center gap-3 mb-5 flex-grow-0">
+                  <span className="text-4xl font-black text-gray-100 select-none">
+                    0{i + 1}
+                  </span>
+                  <h3 className="text-xl font-bold text-gray-800 leading-snug">
+                    {item.title}
+                  </h3>
+                </div>
+
+                <ul className="space-y-4 flex-grow relative">
+                  {/* Decorative line on the left */}
+                  <div className="absolute left-2.5 top-2 bottom-2 w-px bg-gradient-to-b from-gray-200 via-gray-200 to-transparent"></div>
+                  
+                  {item.points.map((point, idx) => (
+                    <li key={idx} className="flex items-start text-gray-600 text-sm leading-relaxed relative">
+                      <FaCheckCircle className={`mt-1 mr-3 flex-shrink-0 bg-white rounded-full relative z-10 ${item.textColor}`} />
+                      <span className="font-medium">{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <h3 className={`mt-6 text-4xl font-bold ${item.color}`}>
-                <Counter end={item.value} />
-                {item.suffix}
-              </h3>
-
-              <p className="mt-2 text-gray-600">
-                {item.label}
-              </p>
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Stories */}
-        <div className="mt-24 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {stories.map((story, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -6 }}
-              className="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition"
-            >
-              <img
-                src={story.image}
-                alt={story.title}
-                className="h-56 w-full object-cover"
-              />
-
-              <div className="p-8">
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {story.title}
-                </h3>
-
-                <p className="mt-3 text-gray-600 leading-relaxed">
-                  {story.desc}
-                </p>
-
-                <span
-                  className={`mt-6 inline-flex items-center gap-2 font-medium ${story.color}`}
-                >
-                  Learn More →
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
       </div>
     </section>
   );
