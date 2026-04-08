@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/Trustss-logo.png";
 import { useState } from "react";
 import axios from "axios";
 

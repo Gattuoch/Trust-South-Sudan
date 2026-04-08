@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/Trustss-logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

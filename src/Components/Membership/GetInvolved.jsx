@@ -1,4 +1,5 @@
 import { FaHeart, FaHandsHelping, FaBullhorn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import trust4 from "../../assets/trust image 4.jpg";
 import trust5 from "../../assets/trust image 5.jpg";
 import trust6 from "../../assets/trust image 6.jpg";
@@ -32,11 +33,11 @@ export default function GetInvolved() {
                 Your contribution helps us provide legal aid, peace programs, and
                 sustainable development initiatives.
               </p>
-              <a href="/donate">
+              <Link to="/donate">
                 <button className="rounded-xl bg-emerald-700 px-8 py-3 text-white font-semibold hover:bg-emerald-800 transition cursor-pointer">
                   Make a Donation
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -54,9 +55,11 @@ export default function GetInvolved() {
                 Share your skills and time to support community programs,
                 training sessions, and advocacy efforts.
               </p>
-              <button className="rounded-xl bg-emerald-500 px-8 py-3 text-white font-semibold hover:bg-emerald-600 transition cursor-pointer">
-                Become a Volunteer
-              </button>
+              <Link to="/contact">
+                <button className="rounded-xl bg-emerald-500 px-8 py-3 text-white font-semibold hover:bg-emerald-600 transition cursor-pointer">
+                  Become a Volunteer
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -72,9 +75,11 @@ export default function GetInvolved() {
                 Spread awareness about our mission and help amplify the voices of
                 marginalized communities.
               </p>
-              <button className="rounded-xl bg-orange-500 px-8 py-3 text-white font-semibold hover:bg-orange-600 transition cursor-pointer">
-                Join Our Advocacy
-              </button>
+              <Link to="/contact">
+                <button className="rounded-xl bg-orange-500 px-8 py-3 text-white font-semibold hover:bg-orange-600 transition cursor-pointer">
+                  Join Our Advocacy
+                </button>
+              </Link>
             </div>
           </div>
         </div>

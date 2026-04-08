@@ -1,119 +1,67 @@
 import {
-  FaDove,
-  FaUsers,
-  FaHeart,
-  FaGavel,
+  FaHeartbeat,
   FaBalanceScale,
-  FaHandsHelping,
-  FaVenusMars,
+  FaShieldAlt,
+  FaUsers,
+  FaLeaf,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const values = [
   {
-    icon: <FaDove />,
-    title: "Peace and Reconciliation",
-    desc: "Our goal is to promote peaceful coexistence, reduce conflict, and heal broken relationships. We believe sustainable development begins with lasting peace.",
-    points: [
-      "Encouraging healing, forgiveness, and reconciliation",
-      "Facilitating dialogue between opposing groups",
-      "Supporting psychosocial assistance and trauma recovery",
-      "Promoting peaceful negotiations and reconciliation practices",
-    ],
-    example:
-      "For example, the organization rebuilds unity and trust through mediation, dialogue forums, and community-led peace initiatives.",
-    bg: "bg-green-50",
-    color: "text-green-600",
-  },
-  {
-    icon: <FaUsers />,
-    title: "Unity in Diversity",
-    desc: "South Sudan is home to many tribes, cultures, dialects, and political beliefs. This diversity is not a source of division, but a foundation of national strength.",
-    points: [
-      "Accepting and valuing every ethnic group",
-      "Encouraging national identity over tribal allegiance",
-      "Promoting cooperation among communities",
-      "Reducing prejudice and animosity between tribes",
-    ],
-    example:
-      "For instance, the organization ensures representation of Dinka, Nuer, Shilluk, Bari, Equatorians, women, youth, and persons with disabilities in leadership roles.",
-    bg: "bg-emerald-50",
-    color: "text-emerald-600",
-  },
-  {
-    icon: <FaHeart />,
-    title: "Integrity and Transparency",
-    desc: "We believe trust is built when leaders act honestly, ethically, and transparently.",
-    points: [
-      "Responsible and transparent financial management",
-      "Open communication with donors and beneficiaries",
-      "Leadership free from hidden decisions",
-      "Ethical conduct at all times",
-    ],
-    example:
-      "For example, financial and program reports are openly shared with donors, government bodies, and communities.",
-    bg: "bg-blue-50",
-    color: "text-blue-600",
+    icon: <FaHeartbeat />,
+    title: "1. Human Dignity and Humanity",
+    desc1:
+      "At the heart of Trust South Sudan lies the unwavering commitment to human dignity. Every individual, regardless of their background, ethnicity, gender, or social status, deserves to be treated with respect, compassion, and fairness. The organization places human life and well-being above all else, ensuring that all interventions protect, preserve, and enhance dignity.",
+    desc2:
+      "In practical terms, this value means prioritizing vulnerable populations in humanitarian response, ensuring respectful service delivery, and designing programs that recognize the worth of every human being. Trust South Sudan believes that sustainable peace and development can only be achieved when humanity is placed at the center of all actions.",
+    gradient: "from-rose-500 to-red-600",
+    bgLight: "bg-red-50",
+    textLight: "text-red-600",
   },
   {
     icon: <FaBalanceScale />,
-    title: "Human Dignity and Respect",
-    desc: "Every human being deserves dignity and respect regardless of background, ethnicity, or belief.",
-    points: [
-      "Defending and promoting human rights",
-      "Respecting cultural traditions",
-      "Supporting conflict survivors to live with dignity",
-      "Opposing discrimination and abuse",
-    ],
-    example:
-      "For instance, the organization provides compassionate support to widows, orphans, displaced persons, and conflict victims.",
-    bg: "bg-purple-50",
-    color: "text-purple-600",
+    title: "2. Neutrality, Impartiality, and Independence",
+    desc1:
+      "Trust South Sudan strictly adheres to humanitarian principles of neutrality and impartiality, ensuring that assistance is delivered without political, ethnic, religious, or ideological bias. The organization does not take sides in conflicts and remains independent in its decision-making and operational execution.",
+    desc2:
+      "This value ensures that communities trust the organization equally, regardless of background or affiliation. It also strengthens partnerships with international donors and government stakeholders by guaranteeing that programs are implemented based solely on need, vulnerability, and urgency—not external influence or political interests.",
+    gradient: "from-blue-500 to-indigo-600",
+    bgLight: "bg-blue-50",
+    textLight: "text-blue-600",
   },
   {
-    icon: <FaHandsHelping />,
-    title: "Community Empowerment",
-    desc: "Real and lasting change happens when communities take ownership of their own development.",
-    points: [
-      "Building local leadership capacity",
-      "Supporting community-led initiatives",
-      "Encouraging participation in decision-making",
-      "Strengthening grassroots resilience",
-    ],
-    example:
-      "For example, young leaders are trained to manage peace initiatives rather than relying on external actors.",
-    bg: "bg-yellow-50",
-    color: "text-yellow-600",
+    icon: <FaShieldAlt />,
+    title: "3. Accountability and Transparency",
+    desc1:
+      "Trust South Sudan is fully committed to accountability at all levels—towards beneficiaries, partners, donors, and government institutions. The organization ensures that resources are used efficiently, ethically, and in line with agreed objectives, with clear reporting and monitoring systems in place.",
+    desc2:
+      "Transparency is demonstrated through open communication, financial integrity, and regular performance reporting. Communities are actively engaged in feedback mechanisms, ensuring that their voices shape programs. This value builds trust, enhances credibility, and strengthens long-term partnerships with stakeholders.",
+    gradient: "from-purple-500 to-fuchsia-600",
+    bgLight: "bg-purple-50",
+    textLight: "text-purple-600",
   },
   {
-    icon: <FaGavel />,
-    title: "Justice and Equality",
-    desc: "We promote social justice, fairness, and equal opportunity for all.",
-    points: [
-      "Ensuring equitable access to services",
-      "Supporting marginalized groups",
-      "Promoting equality in leadership and employment",
-      "Combating injustice, inequality, and corruption",
-    ],
-    example:
-      "For instance, women and youth are guaranteed equal access to leadership roles and programs.",
-    bg: "bg-orange-50",
-    color: "text-orange-500",
+    icon: <FaUsers />,
+    title: "4. Inclusivity and Participation",
+    desc1:
+      "Trust South Sudan believes that sustainable development cannot be achieved without the meaningful participation of all community members. The organization actively promotes inclusion of women, youth, persons with disabilities, and marginalized groups in decision-making processes and program implementation.",
+    desc2:
+      "This value ensures that no group is left behind and that all voices are heard in shaping solutions. By promoting participatory approaches, TSS strengthens ownership, enhances relevance, and ensures that interventions reflect the real needs and priorities of communities.",
+    gradient: "from-amber-500 to-orange-600",
+    bgLight: "bg-orange-50",
+    textLight: "text-orange-600",
   },
   {
-    icon: <FaVenusMars />,
-    title: "Gender Equality and Inclusivity",
-    desc: "Women, youth, the elderly, and persons with disabilities are actively involved in all organizational activities.",
-    points: [
-      "Empowerment of women",
-      "Youth leadership development",
-      "Inclusion of persons with disabilities",
-      "Equal participation in peace and development",
-    ],
-    example:
-      "For example, women co-chair peace dialogues and youth lead community development programs.",
-    bg: "bg-pink-50",
-    color: "text-pink-600",
+    icon: <FaLeaf />,
+    title: "5. Resilience, Innovation, and Sustainability",
+    desc1:
+      "Trust South Sudan is committed to building long-term resilience in communities by addressing both immediate needs and underlying causes of vulnerability. The organization promotes innovative, locally driven solutions that empower communities to withstand shocks, recover from crises, and build sustainable futures.",
+    desc2:
+      "This value emphasizes capacity building, knowledge transfer, and systems strengthening to ensure that development gains are lasting. TSS integrates innovation in programming to improve efficiency and impact, while ensuring that all interventions are environmentally, socially, and economically sustainable.",
+    gradient: "from-emerald-500 to-teal-600",
+    bgLight: "bg-emerald-50",
+    textLight: "text-emerald-600",
   },
 ];
 
@@ -125,84 +73,105 @@ const container = {
   },
 };
 
-const card = {
-  hidden: { opacity: 0, y: 40 },
+const cardVariant = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
 const CoreValues = () => {
   return (
-    <section className="bg-[#fafafa] py-24 px-6 lg:px-16">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative bg-gray-50 py-32 px-6 lg:px-16 overflow-hidden">
+      
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-[120px]" />
+        <div className="absolute top-[40%] -right-[10%] w-[30%] h-[50%] rounded-full bg-blue-200/20 blur-[120px]" />
+        <div className="absolute -bottom-[10%] left-[20%] w-[50%] h-[40%] rounded-full bg-orange-200/20 blur-[120px]" />
+      </div>
 
+      <div className="relative mx-auto max-w-7xl z-10">
+        
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center text-4xl font-bold text-gray-900"
+        <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.7, ease: "easeOut" }}
+           viewport={{ once: true, margin: "-100px" }}
+           className="text-center max-w-3xl mx-auto mb-20"
         >
-          Our Core Values
-        </motion.h2>
+          <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 font-bold tracking-wider text-sm mb-4">
+            OUR FOUNDATION
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+            Core Values
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Trust South Sudan is guided by five strong core values that define our
+            identity, shape our decisions, and guide all humanitarian, peace building,
+            and development interventions.
+          </p>
+        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="mt-4 text-center text-lg text-gray-500"
-        >
-          Guiding principles that drive reconciliation, unity, and sustainable development
-        </motion.p>
-
-        {/* Cards */}
+        {/* Cards Grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
         >
-          {values.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={card}
-              whileHover={{
-                y: -8,
-                boxShadow: "0px 20px 40px rgba(0,0,0,0.08)",
-              }}
-              className="rounded-2xl bg-white p-8 shadow-sm transition text-left"
-            >
-              <div
-                className={`flex h-14 w-14 items-center justify-center rounded-xl ${item.bg} ${item.color}`}
+          {values.map((item, index) => {
+            const isLast = index === values.length - 1;
+            
+            return (
+              <motion.div
+                key={index}
+                variants={cardVariant}
+                whileHover={{ y: -8 }}
+                className={`group relative bg-white rounded-[2.5rem] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 overflow-hidden border border-gray-100/80 ${
+                  isLast ? "md:col-span-2 lg:mx-auto lg:w-2/3" : ""
+                }`}
               >
-                <span className="text-2xl">{item.icon}</span>
-              </div>
+                {/* Hover Top Border Graphic */}
+                <div className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${item.gradient} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out`} />
 
-              <h3 className="mt-6 text-xl font-semibold text-gray-900">
-                {item.title}
-              </h3>
+                {/* Ambient Internal Glow */}
+                <div className={`absolute -right-20 -top-20 w-64 h-64 rounded-full mix-blend-multiply filter blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700 ${item.bgLight}`} />
 
-              <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                {item.desc}
-              </p>
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Header Row */}
+                  <div className="flex items-center gap-6 mb-8">
+                    <div
+                      className={`flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} text-white shadow-lg group-hover:scale-110 transition-transform duration-500 ease-out`}
+                    >
+                      <span className="text-3xl">{item.icon}</span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-black text-gray-900 leading-tight">
+                      {item.title}
+                    </h3>
+                  </div>
 
-              <ul className="mt-4 list-disc list-inside text-sm text-gray-600 space-y-2">
-                {item.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-
-              <p className="mt-4 text-sm italic text-gray-500">
-                {item.example}
-              </p>
-            </motion.div>
-          ))}
+                  {/* Body Text */}
+                  <div className="space-y-5 text-gray-600">
+                    <p className="text-[15px] leading-relaxed relative">
+                      <span className={`absolute -left-4 top-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                      {item.desc1}
+                    </p>
+                    <p className="text-[15px] leading-relaxed relative">
+                      <span className={`absolute -left-4 top-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100`} />
+                      {item.desc2}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
@@ -210,3 +179,4 @@ const CoreValues = () => {
 };
 
 export default CoreValues;
+

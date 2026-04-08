@@ -1,5 +1,6 @@
 import { FaHandshake, FaUsers, FaGlobe } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import trust1 from "../../assets/trust image 1.jpg";
 import trust2 from "../../assets/trust image 2.jpg";
@@ -39,6 +40,7 @@ export default function JoinCommunity() {
       monthly: "$10/month",
       buttonText: "Join Membership",
       buttonColor: "bg-emerald-700 hover:bg-emerald-800",
+      link: "/donate",
     },
     {
       title: "Ordinary Members",
@@ -56,6 +58,7 @@ export default function JoinCommunity() {
       monthly: "$25/month",
       buttonText: "Join Family Membership",
       buttonColor: "bg-emerald-500 hover:bg-emerald-600",
+      link: "/donate",
     },
     {
       title: "Honorary Members",
@@ -73,6 +76,7 @@ export default function JoinCommunity() {
       monthly: "$5,000+/year",
       buttonText: "Explore Corporate Partnership",
       buttonColor: "bg-orange-500 hover:bg-orange-600",
+      link: "/contact",
     },
   ];
 
@@ -157,11 +161,13 @@ export default function JoinCommunity() {
               </div>
 
               {/* Button */}
-              <button
-                className={`w-full rounded-xl py-3 text-white font-semibold transition cursor-pointer ${member.buttonColor}`}
-              >
-                {member.buttonText}
-              </button>
+              <Link to={member.link} className="w-full block">
+                <button
+                  className={`w-full rounded-xl py-3 text-white font-semibold transition cursor-pointer ${member.buttonColor}`}
+                >
+                  {member.buttonText}
+                </button>
+              </Link>
             </div>
           ))}
         </div>

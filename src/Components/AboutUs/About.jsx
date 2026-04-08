@@ -18,14 +18,7 @@ const About = () => {
     <section className="bg-white py-24 px-6 lg:px-16">
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
 
-        {/* Image */}
-        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-          <img
-            src={images[currentIndex]}
-            alt="Community unity"
-            className="absolute inset-0 w-full h-full rounded-3xl object-cover shadow-xl transition-all duration-700"
-          />
-        </div>
+        
 
         {/* Content */}
         <div>
@@ -55,6 +48,14 @@ const About = () => {
             participation, we work with marginalized communities, conflict-affected
             populations, youth, women, and local leaders to create lasting change.
           </p>
+        </div>
+        {/* Image */}
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+          <img
+            src={images[currentIndex]}
+            alt="Community unity"
+            className="absolute inset-0 w-full h-full rounded-3xl object-cover shadow-xl transition-all duration-700"
+          />
         </div>
 
       </div>
