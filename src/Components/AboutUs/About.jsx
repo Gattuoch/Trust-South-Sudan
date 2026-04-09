@@ -59,6 +59,38 @@ const About = () => {
         </div>
 
       </div>
+
+      {/* Vision Section */}
+      <div className="mx-auto max-w-7xl mt-24">
+        {/* Badge */}
+        <div className="flex justify-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-700 text-white text-xs">
+              v
+            </span>
+            Our Vision
+          </span>
+        </div>
+        
+        {/* Title */}
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 leading-tight lg:text-4xl">
+          A Resilient and Unified Nation
+        </h2>
+
+        {/* Content */}
+        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div className="bg-gray-50 rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100">
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Trust South Sudan envisions a resilient and unified nation where peace, justice, and equal opportunity define the lives of all citizens. We aspire to transform a society long affected by conflict, tribal divisions, and nepotism into one where diversity is embraced as a source of strength, and where institutions operate with transparency, accountability, and fairness. Our vision is to see communities living in harmony, with restored trust in one another and in the systems that govern them.
+            </p>
+          </div>
+          <div className="bg-gray-50 rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100">
+            <p className="text-lg text-gray-600 leading-relaxed">
+              We picture a future where individuals are valued for their skills, integrity, and contributions rather than their ethnic identity or personal connections. For example, a nation where a qualified young graduate secures employment based on merit—not favoritism—and where leaders are chosen for their competence and commitment to public service. Trust South Sudan aims to inspire this transformation by fostering a culture of inclusion, ethical leadership, and shared national identity.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

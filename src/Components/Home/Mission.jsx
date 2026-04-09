@@ -1,206 +1,194 @@
-import { FiTarget } from "react-icons/fi";
+import { FiTarget, FiCheckCircle } from "react-icons/fi";
 import { HiOutlineEye } from "react-icons/hi";
 import { FaQuoteLeft } from "react-icons/fa";
 
-const missions = [
-  {
-    title: "1. Humanitarian Assistance",
-    boldDesc: "To deliver life-saving and life-sustaining humanitarian assistance to vulnerable populations",
-    desc: "Trust South Sudan is committed to responding rapidly and effectively to communities affected by conflict, displacement, natural disasters, and extreme poverty..."
-  },
-  {
-    title: "2. Peace Building",
-    boldDesc: "To promote sustainable peace building and social cohesion across conflict-affected communities",
-    desc: "TSS works to address the root causes of conflict by facilitating dialogue, reconciliation, and community-driven peace processes."
-  },
-  {
-    title: "3. Women & Youth Empowerment",
-    boldDesc: "To empower women and youth as key drivers of development and leadership",
-    desc: "TSS prioritizes the empowerment of women and youth through leadership training, education, and economic opportunities."
-  },
-  {
-    title: "4. Livelihoods & Resilience",
-    boldDesc: "To strengthen community resilience and sustainable livelihoods",
-    desc: "Dedicated to improving the economic and social resilience of communities by supporting livelihoods, agriculture, vocational training, and income-generating activities."
-  },
-  {
-    title: "5. Access to Quality Services",
-    boldDesc: "To enhance access to quality basic services including protection, education, and health awareness",
-    desc: "TSS works to bridge the gap between underserved communities and essential services through awareness campaigns and service linkages."
-  },
-  {
-    title: "6. Governance & Capacity",
-    boldDesc: "To strengthen local governance, accountability, and institutional capacity",
-    desc: "The organization supports local authorities and community structures to become more transparent, responsive, and effective."
-  },
-  {
-    title: "7. Partnerships",
-    boldDesc: "To build strong partnerships for sustainable humanitarian and development impact",
-    desc: "TSS actively collaborates with international NGOs, national NGOs, UN agencies, donors, and government institutions to maximize impact."
-  }
-];
-
 const MissionVision = () => {
   return (
-    <section className="bg-white py-24 px-6 lg:px-16">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-slate-50/50 py-16 px-4 lg:px-10" id="mission-vision">
+      <div className="mx-auto max-w-[1440px]">
 
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
 
           {/* Vision */}
-          <div className="group relative rounded-[2rem] bg-white border border-green-50 shadow-lg hover:shadow-2xl transition-all duration-300 p-10 overflow-hidden transform hover:-translate-y-1">
-            <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-green-500 to-green-700" />
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-green-50 rounded-full blur-3xl group-hover:bg-green-100 transition-colors" />
+          <div className="group relative rounded-[1.5rem] bg-white border border-green-100 shadow-md hover:shadow-lg transition-all duration-500 p-5 sm:p-7 overflow-hidden flex flex-col h-full hover:-translate-y-1">
+            <div className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-green-400 to-green-600" />
+            <div className="absolute -top-24 -right-24 w-56 h-56 bg-green-50/80 rounded-full blur-3xl group-hover:bg-green-100 transition-colors duration-700" />
 
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100 text-green-700 shadow-inner mb-8">
-              <HiOutlineEye className="text-3xl" />
+            <div className="relative z-10 flex flex-col mb-5">
+                <div className="flex items-center justify-between w-full mb-3">
+                    <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Vision</h3>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200 text-green-600 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                      <HiOutlineEye className="text-2xl" />
+                    </div>
+                </div>
+                <div className="w-12 h-1 bg-green-500 rounded-full"></div>
             </div>
-
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-5 tracking-tight">Vision</h3>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Trust South Sudan envisions a peaceful, united, and resilient nation where all people live in dignity, equality, and sustainable prosperity. We aspire to a society built on trust, justice, and inclusive development, where communities are empowered to shape their own future free from conflict, vulnerability, and marginalization.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              We see a South Sudan where women, youth, and all citizens actively participate in leadership, peace building, and economic growth, supported by strong and accountable institutions. Through collective effort and shared responsibility, we envision a country that transforms challenges into opportunities and stands as a model of hope, stability, and progress.
-            </p>
+            
+            <div className="relative z-10 flex-grow">
+              <ul className="grid gap-2.5">
+                {[
+                  "Trust South Sudan envisions a resilient and unified nation where peace, justice, and equal opportunity define the lives of all citizens.",
+                  "We aspire to transform a society long affected by conflict, tribal divisions, and nepotism into one where diversity is embraced as a source of strength, and where institutions operate with transparency, accountability, and fairness.",
+                  "Our vision is to see communities living in harmony, with restored trust in one another and in the systems that govern them.",
+                  "We picture a future where individuals are valued for their skills, integrity, and contributions rather than their ethnic identity or personal connections.",
+                  "For example, a nation where a qualified young graduate secures employment based on merit—not favoritism—and where leaders are chosen for their competence and commitment to public service.",
+                  "Trust South Sudan aims to inspire this transformation by fostering a culture of inclusion, ethical leadership, and shared national identity."
+                ].map((item, idx) => (
+                  <li key={idx} className="flex gap-3 items-start p-3 rounded-xl bg-gradient-to-br from-gray-50/50 to-transparent hover:from-green-50/50 hover:to-transparent transition-all border border-gray-50 hover:border-green-200 group/item hover:shadow-sm">
+                    <div className="mt-0.5 bg-green-100 text-green-600 rounded-full p-1 group-hover/item:bg-green-500 group-hover/item:text-white transition-colors duration-300 flex-shrink-0">
+                      <FiCheckCircle className="text-[10px] font-bold" />
+                    </div>
+                    <span className="text-sm text-gray-700 leading-snug font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Mission */}
-          <div className="group relative rounded-[2rem] bg-white border border-emerald-50 shadow-lg hover:shadow-2xl transition-all duration-300 p-10 overflow-hidden transform hover:-translate-y-1">
-            <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-emerald-400 to-emerald-600" />
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-50 rounded-full blur-3xl group-hover:bg-emerald-100 transition-colors" />
+          <div className="group relative rounded-[1.5rem] bg-white border border-emerald-100 shadow-md hover:shadow-lg transition-all duration-500 p-5 sm:p-7 overflow-hidden flex flex-col h-full hover:-translate-y-1">
+            <div className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-emerald-400 to-emerald-600" />
+            <div className="absolute -bottom-24 -left-24 w-56 h-56 bg-emerald-50/80 rounded-full blur-3xl group-hover:bg-emerald-100 transition-colors duration-700" />
 
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-600 shadow-inner mb-8">
-              <FiTarget className="text-3xl" />
+            <div className="relative z-10 flex flex-col mb-5">
+                <div className="flex items-center justify-between w-full mb-3">
+                    <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Mission</h3>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 text-emerald-600 shadow-sm group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
+                        <FiTarget className="text-2xl" />
+                    </div>
+                </div>
+                <div className="w-12 h-1 bg-emerald-500 rounded-full"></div>
             </div>
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-5 tracking-tight">Mission</h3>
+            
+            <div className="space-y-4 relative z-10 flex-grow">
+              <div className="p-4 rounded-xl bg-emerald-50/60 border-l-4 border-emerald-500 text-gray-800 text-sm leading-snug space-y-3 shadow-sm font-medium">
+                <p>
+                  The mission of Trust South Sudan is to rebuild trust, promote social cohesion, and advance sustainable peace by addressing the underlying causes of conflict, tribalism, and nepotism. We are dedicated to empowering individuals and communities through education, advocacy, and inclusive programs that strengthen unity, accountability, and equal participation in development processes.
+                </p>
+                <p>
+                  To bring this mission to life, Trust South Sudan implements initiatives that encourage dialogue, collaboration, and community-driven solutions. For instance, we organize peace forums that bring together youth from historically divided communities to engage in open discussions, leadership training, and joint projects such as small businesses or community services.
+                </p>
+              </div>
 
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Trust South Sudan is guided by seven interconnected mission commitments that define its humanitarian identity, operational focus, and long-term development impact. These missions position the organization as a credible partner for international NGOs, national NGOs, donors, and government stakeholders.
-            </p>
-
-            <ul className="space-y-5 text-gray-600 leading-relaxed">
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>1. Humanitarian Assistance:</strong> To deliver life-saving and life-sustaining humanitarian assistance to vulnerable populations.</span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>2. Peace Building:</strong> To promote sustainable peace building and social cohesion across conflict-affected communities.</span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>3. Women & Youth Empowerment:</strong> To empower women and youth as key drivers of development and leadership.</span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>4. Livelihoods & Resilience:</strong> To strengthen community resilience and sustainable livelihoods.</span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>5. Access to Quality Services:</strong> To enhance access to quality basic services including protection, education, and health awareness.</span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>6. Governance & Capacity:</strong> To strengthen local governance, accountability, and institutional capacity.</span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold mt-1">•</span>
-                <div className="flex flex-col">
-                  <span><strong>7. Partnerships:</strong> To build strong partnerships for sustainable humanitarian and development impact.</span>
-                </div>
-              </li>
-            </ul>
+              <div>
+                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2">Core Commitments</h4>
+                <ul className="grid gap-2">
+                  {[
+                    { title: "Humanitarian Assistance", desc: "To deliver life-saving and life-sustaining humanitarian assistance to vulnerable populations." },
+                    { title: "Peace Building", desc: "To promote sustainable peace building and social cohesion across conflict-affected communities." },
+                    { title: "Women & Youth Empowerment", desc: "To empower women and youth as key drivers of development and leadership." },
+                    { title: "Livelihoods & Resilience", desc: "To strengthen community resilience and sustainable livelihoods." },
+                    { title: "Access to Quality Services", desc: "To enhance access to quality basic services including protection, education, and health awareness." },
+                    { title: "Governance & Capacity", desc: "To strengthen local governance, accountability, and institutional capacity." },
+                    { title: "Partnerships", desc: "To build strong partnerships for sustainable humanitarian and development impact." }
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex gap-3 items-start p-3 rounded-xl bg-white border border-gray-100 hover:border-emerald-200 hover:bg-emerald-50/40 transition-all shadow-sm group/item">
+                      <div className="mt-0.5 bg-emerald-100 text-emerald-600 rounded-lg p-1.5 group-hover/item:bg-emerald-500 group-hover/item:text-white transition-colors duration-300 flex-shrink-0">
+                        <FiCheckCircle className="text-[10px] font-bold" />
+                      </div>
+                      <div className="leading-tight">
+                          <strong className="text-gray-900 block mb-0.5 text-[13px]">{idx + 1}. {item.title}</strong>
+                          <span className="text-xs text-gray-600 block font-medium">{item.desc}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Goals & Mandate */}
-          <div className="group relative rounded-[2rem] bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 shadow-lg hover:shadow-2xl transition-all duration-300 p-8 overflow-hidden transform hover:-translate-y-1">
-            <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-orange-400 to-amber-500" />
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-100 rounded-full blur-3xl group-hover:bg-orange-200 transition-colors" />
+          <div className="group relative rounded-[1.5rem] bg-gradient-to-br from-orange-50/80 to-amber-50/40 border border-orange-100 shadow-md hover:shadow-lg transition-all duration-500 p-5 sm:p-7 overflow-hidden flex flex-col h-full hover:-translate-y-1">
+            <div className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-orange-400 to-amber-500" />
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-orange-100/60 rounded-full blur-3xl group-hover:bg-orange-200/50 transition-colors duration-700" />
 
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-orange-500 shadow-inner mb-6">
-              <FaQuoteLeft className="text-3xl" />
+            <div className="relative z-10 flex flex-col mb-5">
+                <div className="flex items-center justify-between w-full mb-3">
+                    <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight leading-tight">Goals &<br/>Mandate</h3>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 text-orange-500 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 flex-shrink-0">
+                      <FaQuoteLeft className="text-xl" />
+                    </div>
+                </div>
+                <div className="w-12 h-1 bg-orange-500 rounded-full"></div>
             </div>
 
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-5 tracking-tight">
-              Goals & Mandate
-            </h3>
-
-            <div className="space-y-6">
-              {/* Goals */}
-              <div>
-                <h4 className="text-lg font-bold text-orange-600 mb-2">Our Goals</h4>
-                <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Promote sustainable peacebuilding and national reconciliation</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Strengthen national unity and social cohesion</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Advance transitional justice, accountability, and healing</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Combat corruption and promote good governance</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Empower women and youth as agents of peace</li>
-                </ul>
-              </div>
-
+            <div className="space-y-5 relative z-10 flex-grow">
+              
               {/* Overview */}
-              <div>
-                <h4 className="text-lg font-bold text-orange-600 mb-2">Overview</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+              <div className="p-4 rounded-xl bg-white/70 border border-orange-100/80 shadow-sm backdrop-blur-md">
+                <p className="text-sm text-gray-800 leading-snug font-semibold">
                   Trust South Sudan (TSS) is mandated to design and implement programs that save lives, restore dignity, build peace, and promote sustainable development. Our mandate is grounded in legal registration under the RRC and the NGO Act, 2016.
                 </p>
               </div>
 
+              {/* Goals */}
+              <div>
+                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Our Goals
+                </h4>
+                <ul className="grid gap-2">
+                  {[
+                    "Promote sustainable peacebuilding and national reconciliation",
+                    "Strengthen national unity and social cohesion",
+                    "Advance transitional justice, accountability, and healing",
+                    "Combat corruption and promote good governance",
+                    "Empower women and youth as agents of peace"
+                  ].map((goal, idx) => (
+                    <li key={idx} className="flex gap-2.5 items-center p-2.5 rounded-xl hover:bg-orange-100/50 transition-colors group/item shadow-sm border border-transparent hover:border-orange-100 bg-white/40 backdrop-blur-sm">
+                      <div className="bg-orange-100 p-1.5 rounded-lg text-orange-500 group-hover/item:bg-orange-500 group-hover/item:text-white transition-colors flex-shrink-0">
+                          <FiCheckCircle className="text-[10px] font-bold" />
+                      </div>
+                      <span className="text-xs font-semibold text-gray-800 group-hover/item:text-orange-950 transition-colors leading-tight">{goal}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Core Purpose */}
               <div>
-                <h4 className="text-lg font-bold text-orange-600 mb-2">Core Purpose</h4>
-                <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Respond to humanitarian needs</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Promote peace building & cohesion</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Empower women, youth & marginalized</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Strengthen livelihoods & resilience</li>
-                  <li className="flex gap-2"><span className="text-orange-500 font-bold">•</span> Support sustainable development</li>
+                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Core Purpose
+                </h4>
+                <ul className="grid gap-2 grid-cols-1 xl:grid-cols-2">
+                  {[
+                    "Respond to humanitarian needs",
+                    "Promote peace building",
+                    "Empower marginalized",
+                    "Strengthen resilience",
+                    "Support development"
+                  ].map((purpose, idx) => (
+                    <li key={idx} className="flex gap-2 items-center text-xs font-semibold text-gray-700 bg-white/60 p-2.5 rounded-lg border border-orange-100/70 shadow-sm hover:border-orange-200 transition-all">
+                      <FiCheckCircle className="text-orange-500 flex-shrink-0 text-[10px]" />
+                      <span>{purpose}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               {/* Strategic Mandate Areas */}
               <div>
-                <h4 className="text-lg font-bold text-orange-600 mb-2">Strategic Mandate Areas</h4>
-                <ul className="space-y-4 text-sm text-gray-600 leading-relaxed">
-                  <li>
-                    <strong className="text-gray-800">Humanitarian Response:</strong> Timely life-saving assistance for conflict, natural disasters, and food insecurity. Interventions include emergency relief, protection, and basic needs.
-                  </li>
-                  <li>
-                    <strong className="text-gray-800">Peacebuilding & Reconciliation:</strong> Dialogue, mediation, trauma healing, and social cohesion promotion.
-                  </li>
-                  <li>
-                    <strong className="text-gray-800">Women & Youth Empowerment:</strong> Support leadership, engagement, and prevent gender inequality/GBV.
-                  </li>
-                  <li>
-                    <strong className="text-gray-800">Livelihoods & Resilience:</strong> Agriculture, food security, and building resilience to shocks.
-                  </li>
-                  <li>
-                    <strong className="text-gray-800">Governance:</strong> Capacity building for local institutions and promoting accountability.
-                  </li>
+                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Strategic Areas
+                </h4>
+                <ul className="space-y-2 text-xs text-gray-700 leading-tight bg-white/70 p-4 rounded-xl border border-orange-100/80 shadow-sm backdrop-blur-md font-medium">
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Humanitarian Response:</strong> Timely life-saving assistance for conflict, natural disasters.</li>
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Peacebuilding:</strong> Dialogue, mediation, trauma healing, and social cohesion.</li>
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Women & Youth:</strong> Support leadership, engagement, and prevent gender inequality.</li>
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Livelihoods:</strong> Agriculture, food security, and building resilience to shocks.</li>
+                    <li className="relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Governance:</strong> Capacity building for local institutions.</li>
                 </ul>
               </div>
 
-              {/* Legal & Ethical Basis */}
+              {/* Framework & Authority */}
               <div>
-                <h4 className="text-lg font-bold text-orange-600 mb-2">Framework & Authority</h4>
-                <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                  <li><strong className="text-gray-800">Operational:</strong> Partners with stakeholders aligning with national goals.</li>
-                  <li><strong className="text-gray-800">Legal/Ethical:</strong> Guided by national laws, human rights, and internal codes.</li>
-                  <li><strong className="text-gray-800">Principles:</strong> Humanity, Neutrality, Impartiality, Independence, Accountability, Transparency.</li>
-                  <li><strong className="text-gray-800">Authority:</strong> Implement projects, mobilize resources, form partnerships, and monitor impact.</li>
+                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Framework & Authority
+                </h4>
+                <ul className="space-y-2 text-xs text-gray-700 leading-tight bg-white/70 p-4 rounded-xl border border-orange-100/80 shadow-sm backdrop-blur-md font-medium">
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Operational:</strong> Partners with stakeholders aligning with national goals.</li>
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Legal/Ethical:</strong> Guided by national laws, human rights, and internal codes.</li>
+                    <li className="border-b border-orange-100 pb-2 relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Principles:</strong> Humanity, Neutrality, Impartiality, Independence, Accountability, Transparency.</li>
+                    <li className="relative"><span className="absolute -left-2 top-1.5 w-1 h-1 rounded-full bg-orange-400"></span><strong className="text-orange-950">Authority:</strong> Implement projects, mobilize resources, form partnerships, and monitor impact.</li>
                 </ul>
               </div>
 
