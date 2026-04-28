@@ -51,6 +51,11 @@ import TrustIDCard17 from "./Components/ID/TrustIDCard17";
 import TrustIDCard15 from "./Components/ID/TrustIDCard15";
 import TrustIDCard16 from "./Components/ID/TrustIDCard16";
 import TrustIDCard014 from "./Components/ID/TrustIDCard014";
+import TrustIDCard22 from "./Components/ID/TrustIDCard22";
+import TrustIDCard21 from "./Components/ID/TrustIDCard21";
+import TrustIDCard20 from "./Components/ID/TrustIDCard20";
+import TrustIDCard18 from "./Components/ID/TrustIDCard18";
+import TrustIDCard19 from "./Components/ID/TrustIDCard19";
 
 function App() {
   const location = useLocation();
@@ -211,10 +216,30 @@ function App() {
                   <> <TrustIDCard16/> 
                    <TrustCertificate/>
                      </>} />
+       <Route path="/id/buay-wal" element={
+                  <> <TrustIDCard22/> 
+                   <TrustCertificate/>
+                     </>} />
        <Route path="/id/pal-khot" element={
                   <> <TrustIDCard014/> 
                    <TrustCertificate/>
-                     </>} />                                     
+                     </>} />  
+       <Route path="/id/gatluak-buony" element={
+                  <> <TrustIDCard21/> 
+                   <TrustCertificate/>
+                     </>} /> 
+       <Route path="/id/nhial-jock-bol" element={
+                  <> <TrustIDCard20/> 
+                   <TrustCertificate/>
+                     </>} /> 
+       <Route path="/id/nyabel-deng" element={
+                  <> <TrustIDCard18/> 
+                   <TrustCertificate/>
+                     </>} /> 
+       <Route path="/id/thijin-khan" element={
+                  <> <TrustIDCard19/> 
+                   <TrustCertificate/>
+                     </>} /> 
         <Route
           path="/super-admin/admin-management"
           element={<AdminManagement />}
