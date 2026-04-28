@@ -66,31 +66,53 @@ const BackgroundAndLegal = () => {
             
             {/* I. Background */}
             <motion.div variants={itemVariants} className="group flex flex-col h-full">
-              <div className="flex items-center gap-5 mb-8 border-b-2 border-emerald-100 pb-6 relative">
-                <div className="absolute bottom-[-2px] left-0 w-24 h-[2px] bg-emerald-500 transition-all duration-500 group-hover:w-full" />
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 text-white shadow-lg group-hover:scale-110 transition-transform duration-500">
-                  <FaGlobeAfrica className="text-2xl" />
+              {/* Header with improved aesthetics */}
+              <div className="flex items-center gap-6 mb-10 pb-8 relative border-b border-emerald-100/50">
+                <div className="absolute bottom-[-1px] left-0 w-32 h-[3px] bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-700 group-hover:w-full rounded-full" />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-emerald-400 blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 text-white shadow-[0_10px_20px_rgba(16,185,129,0.3)] group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 overflow-hidden">
+                    <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <FaGlobeAfrica className="text-3xl relative z-10" />
+                  </div>
                 </div>
-                <h3 className="text-3xl font-black text-emerald-900 tracking-tight">
+                <h3 className="text-4xl font-black text-emerald-950 tracking-tight leading-none">
                   Background
+                  <span className="block text-sm font-bold text-emerald-600 uppercase tracking-[0.2em] mt-2 opacity-70">The Foundation of TSS</span>
                 </h3>
               </div>
               
-              <div className="space-y-5 text-gray-700 text-[15.5px] leading-relaxed">
-                <p>
-                  South Sudan continues to face complex humanitarian, socio-economic, and governance challenges arising from prolonged conflict, displacement, institutional fragility, and climate-related shocks. Communities—particularly women, youth, and marginalized groups—remain highly vulnerable, with limited access to essential services, justice systems, and sustainable livelihoods.
-                </p>
-                <p>
-                  It is within this context that <strong className="text-emerald-700 font-extrabold px-1 bg-emerald-50 rounded">Trust South Sudan (TSS)</strong> was established as a locally rooted, non-partisan humanitarian and development organization committed to transforming communities through trust-building, resilience strengthening, and inclusive development.
+              <div className="space-y-6 text-gray-700 text-[16px] leading-relaxed">
+                <p className="first-letter:text-5xl first-letter:font-black first-letter:text-emerald-600 first-letter:mr-3 first-letter:float-left">
+                  Trust South Sudan is a visionary, non-partisan initiative founded by South Sudanese scholar 
+                  <span className="inline-block px-2 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded-md border border-emerald-100 mx-1">David Dak Doyak,</span>
+                  a <span className="text-emerald-700 font-semibold underline decoration-emerald-300 decoration-2 underline-offset-4">Criminal Law and Justice Specialist (LLM)</span> at the Ethiopian Public Service University in Addis Ababa. 
+                  Established in response to one of the world’s most protracted humanitarian and governance crises, the organization emerges from a deeply informed understanding of South Sudan’s social fragmentation, institutional fragility, and widespread displacement.
                 </p>
                 
-                <div className="mt-8 p-6 bg-gradient-to-r from-emerald-50 to-teal-50/30 rounded-2xl border-l-[6px] border-emerald-500 shadow-sm relative overflow-hidden group-hover:shadow-md transition-shadow">
-                  <div className="absolute -right-6 -bottom-6 text-emerald-500/10 rotate-12">
-                     <FaLightbulb size={120} />
+                <p>
+                  Today, millions of South Sudanese remain refugees in neighboring countries, while internally displaced persons (IDPs) within the country outnumber those living in stable communities—an imbalance that underscores the urgency of rebuilding not only systems, but <strong className="text-emerald-900 font-bold">trust itself.</strong> Rather than aligning with political factions, Trust South Sudan is grounded in a principled commitment to neutrality, reconciliation, and long-term nation-building through justice, civic engagement, and institutional accountability.
+                </p>
+
+                <p>
+                  The organization seeks to serve as a bridge between communities, government institutions, and international partners by advancing locally driven solutions that restore confidence in public systems and social cohesion. By investing in <span className="text-teal-700 font-bold italic">trust as both a value and a strategy</span>, TSS positions itself as a credible and forward-looking partner in shaping a resilient and unified future for the nation.
+                </p>
+
+                <div className="relative group/card mt-12 overflow-hidden rounded-[2rem] p-8 transition-all duration-500 bg-gradient-to-br from-white to-emerald-50/50 border border-emerald-100/50 shadow-[0_20px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_60px_rgba(16,185,129,0.1)]">
+                  <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl group-hover/card:bg-emerald-500/10 transition-colors" />
+                  <div className="absolute -right-6 -bottom-6 text-emerald-500/5 rotate-12 group-hover/card:rotate-0 group-hover/card:scale-110 transition-all duration-700">
+                     <FaLightbulb size={140} />
                   </div>
-                  <p className="text-emerald-900 font-medium italic relative z-10">
-                    TSS was founded on the belief that sustainable peace and development must be locally driven, supported by strong partnerships, and guided by international best practices.
-                  </p>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="h-px w-8 bg-emerald-500" />
+                      <span className="text-xs font-black uppercase tracking-widest text-emerald-600">Core Belief</span>
+                    </div>
+                    <p className="text-emerald-950 text-lg font-medium italic leading-relaxed">
+                      "TSS was founded on the belief that sustainable peace and development must be locally driven, supported by strong partnerships, and guided by international best practices."
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
